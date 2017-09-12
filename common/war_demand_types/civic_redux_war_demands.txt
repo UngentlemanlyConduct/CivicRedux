@@ -1,0 +1,310 @@
+demilitarize = {
+	execution_order = 1
+	
+	parameters = {
+		country = {
+			type = country
+		}
+	}
+	
+	warscore_cost = {
+		base = 10
+	}
+	
+	potential = {
+		OR = {
+			is_subject = no
+			NOT = {
+				overlord = {
+					is_same_value = from
+				}
+			}
+		}
+		
+		has_valid_civic = civic_peacekeeping_interventionists
+		
+		parameter:country = {
+			is_country = from
+			OR = {
+				has_policy_flag = unrestricted_wars
+				has_policy_flag = liberation_wars
+			}
+		}	
+	}
+	
+	possible = {
+		hidden:parameter:country = {
+			custom_tooltip = {
+				fail_text = "war_demand_policy_no_planets"
+				war_demand_counter = {
+					type = num_owned_planets
+					value > 0
+				}
+			}
+		}
+	}
+	
+	effect = {
+		fromfromfrom = {
+			add_influence = 100
+		}
+		parameter:country = {		
+			add_modifier = {
+				modifier = demilitarized
+				days = 3600
+			}
+			hidden_effect = {
+				set_policy = {
+					policy = war_philosophy
+					option = no_wars
+					cooldown = yes
+				}
+			}			
+		}	
+	}
+	
+	counters = {
+		num_country_wargoals = {
+			context = parameter:country
+			value = {
+				base = 1
+			}
+		}	
+	}		
+	
+	ai_weight = {
+		base = 10
+	}
+}
+
+blood_hunt = {
+	execution_order = 0
+	
+	parameters = {
+		planet = {
+			type = planet
+			filter = owned
+		}
+	}
+	
+	warscore_cost = {
+		base = 0
+		
+		scaled_modifier = {
+			scope = parameter:planet
+			add = 1
+			calc = pop_count
+		}
+		
+		modifier = {
+			factor = 2.5
+			hidden:parameter:planet = {
+				is_capital = yes
+			}
+		}
+	}
+	
+	potential = {
+		custom_tooltip = {
+			fail_text = "war_demand_cede_planet_no_vassals"
+			OR = {
+				is_subject = no
+				NOT = {
+					overlord = {
+						is_same_value = from
+					}
+				}
+				parameter:planet = {
+					is_original_owner = root
+				}
+			}
+		}	
+		custom_tooltip = {
+			fail_text = "war_demand_cede_planet_liberation_war"
+			OR = {
+				NOT = { exists = overlord }
+				overlord = {
+					NOT = { is_same_value = from }
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "war_demand_cede_planet_belongs_to_opponent"
+			parameter:planet = {
+				owner = {
+					OR = {
+						AND = {
+							exists = fromfrom
+							from = {
+								from = {
+									is_war_participant = {
+										who = prevprev
+										side = prev
+									}
+								}
+							}
+						}
+						AND = {
+							NOT = { exists = fromfrom }
+							would_join_war = {
+								attacker = root
+								defender = from
+								side = from
+							}
+						}
+						
+					}
+				}
+			}
+		}
+		
+		has_valid_civic = civic_blood_hunters
+	}
+	
+	possible = {
+		hidden_trigger = {
+			parameter:planet.owner = {
+				OR = {
+					war_demand_counter = {
+						type = num_country_wargoals
+						value < 1
+					}
+					war_demand_counter = {
+						type = num_owned_planets
+						value > 1
+					}					
+				}			
+			}
+		}
+	}
+	
+	demandable = {
+		custom_tooltip = {
+			fail_text = "war_demand_cede_planet_not_under_our_control"
+			parameter:planet = {
+				controller = {
+					OR = {
+						is_country = parameter:planet.owner
+						fromfrom = {
+							is_war_participant = {
+								who = prev
+								side = from
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		parameter:planet = {
+			add_threat = {
+				who = fromfromfrom
+				amount = 5 # scales to pops
+			}	
+			random_pop = {
+				kill_pop = yes
+			}
+			fromfromfrom = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = 0.2
+					min = 1
+					max = 9999
+				}
+				add_monthly_resource_mult = {
+					resource = unity
+					value = 0.5
+					min = 1
+					max = 9999
+				}
+			}
+			
+			random_pop = {
+				kill_pop = yes
+			}
+			fromfromfrom = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = 0.2
+					min = 1
+					max = 9999
+				}
+				add_monthly_resource_mult = {
+					resource = unity
+					value = 0.5
+					min = 1
+					max = 9999
+				}
+			}
+			
+			random_pop = {
+				kill_pop = yes
+			}
+			fromfromfrom = {
+				add_monthly_resource_mult = {
+					resource = society_research
+					value = 0.2
+					min = 1
+					max = 9999
+				}
+				add_monthly_resource_mult = {
+					resource = unity
+					value = 0.5
+					min = 1
+					max = 9999
+				}
+			}
+			
+			while = {
+				limit = {
+					num_pops > 0
+				}
+				random_list = {
+					7 = {
+						random_pop = {
+							kill_pop = yes
+						}
+						fromfromfrom = {
+							add_monthly_resource_mult = {
+								resource = society_research
+								value = 0.2
+								min = 1
+								max = 9999
+							}
+							add_monthly_resource_mult = {
+								resource = unity
+								value = 0.5
+								min = 1
+								max = 9999
+							}
+						}
+					}
+					3 = {
+						break = yes
+					}
+				}
+			}
+		}
+	}
+	
+	counters = {
+		num_owned_planets = {
+			context = parameter:planet.owner
+			value = {
+				base = -1
+			}
+		}
+		ceded_or_liberated = {
+			context = parameter:planet
+			value = {
+				base = 1
+			}			
+		}
+	}
+	
+	ai_weight = {
+		base = 1000
+	}
+}

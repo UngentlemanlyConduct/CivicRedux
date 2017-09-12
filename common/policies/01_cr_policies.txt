@@ -1,0 +1,259 @@
+##########################################################################
+# Empire Policies
+#
+# #####
+#
+# AI:
+# Base AI-weight is 100, if unchanged
+# AI will grab whatever policy-option has the highest weight
+#
+# #####
+#
+##########################################################################
+
+war_philosophy = {
+
+	potential = {
+		always = yes   # only normal Empires should have this policy
+	}
+	
+	allow = {
+		is_at_war = no # Not allowed to change policies in this group while at war
+	}
+	
+	option = {
+		name = "unrestricted_wars"
+		
+		policy_flags = {
+			unrestricted_wars
+		}
+		
+		valid = {
+			NOR = {
+				has_ethic = "ethic_pacifist"
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+					has_valid_ai_personality = no
+					is_ai = no
+				}
+				NOT = {
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+				}
+			}
+			modifier = {
+				factor = 10
+				has_valid_ai_personality = yes
+				is_ai = yes
+				OR = {
+					has_ai_personality_behaviour = conqueror
+					has_ai_personality_behaviour = subjugator
+					has_ai_personality_behaviour = purger
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "liberation_wars"
+		
+		policy_flags = {
+			liberation_wars
+		}
+		
+		valid = {
+			NOR = {
+				has_valid_civic = "civic_fanatic_purifiers"
+				has_valid_civic = "civic_hive_devouring_swarm"
+			}
+			OR = {
+				NOT = {
+					has_ethic = "ethic_fanatic_pacifist"
+				}
+				AND = {
+					has_ethic = "ethic_fanatic_pacifist"
+					has_valid_civic = civic_peacekeeping_interventionists
+				}
+			}
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 2
+				OR = {
+					has_valid_ai_personality = no
+					is_ai = no
+				}
+				has_ethic = "ethic_pacifist"
+			}
+			modifier = {
+				factor = 2
+				has_valid_ai_personality = yes
+				is_ai = yes
+				OR = {
+					has_ai_personality_behaviour = conqueror
+					has_ai_personality_behaviour = subjugator
+					has_ai_personality_behaviour = liberator
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "no_wars"
+		
+		policy_flags = {
+			no_wars
+		}
+
+		valid = {
+			NOR = {
+				has_ethic = "ethic_fanatic_militarist"
+				has_valid_civic = "civic_fanatic_purifiers"
+				has_valid_civic = "civic_hive_devouring_swarm"
+			}
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 5
+				has_ethic = "ethic_fanatic_pacifist"
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_ethic = "ethic_fanatic_pacifist" }
+			}
+		}
+	}
+}
+
+orbital_bombardment = {
+
+	potential = {
+		always = yes
+	}
+	
+	option = {
+		name = "orbital_bombardment_light"
+		
+		policy_flags = {
+			allow_orbital_bombardment_light
+		}
+		
+		on_enabled = {
+			# custom_tooltip = "policy_allow_slavery_effect_disable"
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 4
+				OR = {
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+				}
+			}
+		}
+	}
+	option = {
+		name = "orbital_bombardment_limited"
+		
+		policy_flags = {
+			allow_orbital_bombardment_light
+			allow_orbital_bombardment_limited
+		}
+		modifier = {}
+		
+		valid = {
+			NOT = {	has_ethic = "ethic_fanatic_pacifist" }
+		}
+		
+		AI_weight = {
+			modifier = {
+				factor = 2
+				NOT = {
+					has_ethic = "ethic_pacifist"
+					has_ethic = "ethic_fanatic_pacifist"
+				}
+			}
+		}
+	}
+	option = {
+		name = "orbital_bombardment_full"
+		
+		potential = {
+		}
+		
+		valid = {
+			OR = {
+				has_ethic = "ethic_militarist"
+				has_ethic = "ethic_fanatic_militarist"
+				has_ethic = "ethic_hive_mind"
+				has_valid_civic = civic_destructive_tendencies
+				custom_tooltip_success = {
+					text = TRIGGER_FANATIC_PURIFIERS
+					has_valid_civic = "civic_fanatic_purifiers"
+				}			
+			}
+		}
+		
+		policy_flags = {
+			allow_orbital_bombardment_light
+			allow_orbital_bombardment_limited
+			allow_orbital_bombardment_full
+		}
+		modifier = {}
+		
+		AI_weight = {
+			modifier = {
+				factor = 4
+				OR = {
+					has_ethic = "ethic_fanatic_militarist"
+					has_ethic = "ethic_fanatic_xenophobe"
+					has_valid_civic = "civic_hive_devouring_swarm"
+				}
+			}
+		}
+	}
+	option = {
+		name = "orbital_bombardment_armageddon"
+		
+		potential = {
+			OR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_destructive_tendencies
+			}
+		}
+		
+		valid = {
+			always = yes
+		}
+		
+		policy_flags = {
+			allow_orbital_bombardment_light
+			allow_orbital_bombardment_limited
+			allow_orbital_bombardment_full
+			allow_orbital_bombardment_armageddon
+		}
+		modifier = {}
+		
+		AI_weight = {
+			modifier = {
+				factor = 10
+				has_valid_civic = civic_fanatic_purifiers
+			}
+		}
+	}
+}

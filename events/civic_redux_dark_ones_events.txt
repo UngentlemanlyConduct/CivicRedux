@@ -1,0 +1,461 @@
+#Dark Ones Pleased - 2 Years (719 Days)
+#Dark Ones Content - 6 Years (2159 Days)
+#Dark Ones Hungry - 2 Years (719 Days)
+
+namespace = credux_dark_ones
+
+country_event = {
+	id = credux_dark_ones.111
+	title = credux_dark_ones.01.name
+	desc = credux_dark_ones.01.desc
+	
+	picture = GFX_evt_unspeakable_horror
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_valid_civic = civic_dark_influence
+	}
+	
+	option = {
+		name = OK
+	}
+}
+
+country_event = {
+	id = credux_dark_ones.1 #Initialise the Dark One's countdown on your capital. Repeat for planets that have been captured/colonised.
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_valid_civic = civic_dark_influence
+	}
+		
+	immediate = {
+		every_planet = {
+			limit = {
+				is_capital = yes
+				NOR = {
+					has_planet_flag = dark_ones_pleased
+					has_planet_flag = dark_ones_content
+					has_planet_flag = dark_ones_hungry
+				}
+			}
+			planet_event = {
+				id = credux_dark_ones.11
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = credux_dark_ones.11
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			has_valid_civic = civic_dark_influence
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					has_planet_flag = dark_ones_pleased
+					has_planet_flag = dark_ones_content
+					has_planet_flag = dark_ones_hungry
+				}
+			}
+			set_planet_flag = dark_ones_content #Dark Ones start of content.
+			add_modifier = {
+				modifier = dark_ones_content
+				days = 2159
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = credux_dark_ones.2 #Sacrifice Pops!
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_owned_pop = {
+			limit = {
+				is_robot_pop = no
+				NOT = {
+					is_same_species = owner
+				}
+			}
+			kill_pop = yes
+		}
+		if = {
+			limit = {
+				has_planet_flag = dark_ones_content
+			}
+			remove_planet_flag = dark_ones_content
+			remove_modifier = dark_ones_content
+		}
+		if = {
+			limit = {
+				has_planet_flag = dark_ones_hungry
+			}
+			remove_planet_flag = dark_ones_hungry
+			remove_modifier = dark_ones_hungry
+		}
+		set_planet_flag = dark_ones_pleased
+		add_modifier = {
+			modifier = dark_ones_pleased
+			days = 719
+		}
+	}
+}
+
+planet_event = {
+	id = credux_dark_ones.3 #Sacrifice Pops!
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_owned_pop = {
+			limit = {
+				is_robot_pop = no
+			}
+			kill_pop = yes
+		}
+		if = {
+			limit = {
+				has_planet_flag = dark_ones_content
+			}
+			remove_planet_flag = dark_ones_content
+			remove_modifier = dark_ones_content
+		}
+		if = {
+			limit = {
+				has_planet_flag = dark_ones_hungry
+			}
+			remove_planet_flag = dark_ones_hungry
+			remove_modifier = dark_ones_hungry
+		}
+		set_planet_flag = dark_ones_pleased
+		add_modifier = {
+			modifier = dark_ones_pleased
+			days = 719
+		}
+	}
+}
+
+planet_event = {
+	id = credux_dark_ones.4 #Rid the Dark Ones from a planet
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_planet_flag = dark_ones_pleased
+			}
+			remove_planet_flag = dark_ones_pleased
+			remove_modifier = dark_ones_pleased
+		}
+		
+		if = {
+			limit = {
+				has_planet_flag = dark_ones_content
+			}
+			remove_planet_flag = dark_ones_content
+			remove_modifier = dark_ones_content
+		}
+		
+		if = {
+			limit = {
+				has_planet_flag = dark_ones_hungry
+			}
+			remove_planet_flag = dark_ones_hungry
+			remove_modifier = dark_ones_hungry
+		}
+		
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 5
+				min = 50
+				max = 5000
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = credux_dark_ones.5 #Change Pleased to Content
+	
+	hide_window = yes
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		has_planet_flag = dark_ones_pleased
+		NOT = {
+			has_modifier = dark_ones_pleased
+		}
+	}
+	
+	immediate = {
+		remove_planet_flag = dark_ones_pleased
+		
+		set_planet_flag = dark_ones_content
+		add_modifier = {
+			modifier = dark_ones_content
+			days = 2159
+		}
+	}
+}
+
+planet_event = {
+	id = credux_dark_ones.6 #Change Content to Hungry (Warns player with message)
+	
+	hide_window = yes
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		has_planet_flag = dark_ones_content
+		NOT = {
+			has_modifier = dark_ones_content
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				owner = {
+					has_edict = sacrifice_auto
+				}
+			}
+			if = {
+				limit = {
+					any_pop = {
+						NOT = {
+							is_same_species = owner
+						}
+					}
+				}
+				planet_event = {
+					id = credux_dark_ones.2
+				}
+				else = {
+					planet_event = {
+						id = credux_dark_ones.3
+					}
+				}
+			}
+			else = {
+				planet_event = {
+					id = credux_dark_ones.62
+				}
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = credux_dark_ones.62 #Change Content to Hungry (Warns player with message)
+	title = "credux_dark_ones.62.name"
+	desc = "credux_dark_ones.62.desc"
+	
+	picture = GFX_evt_unspeakable_horror
+	show_sound = event_mystic_reveal
+	
+	is_triggered_only = yes
+		
+	immediate = {
+		remove_planet_flag = dark_ones_content
+		
+		set_planet_flag = dark_ones_hungry
+		add_modifier = {
+			modifier = dark_ones_hungry
+			days = 719
+		}
+	}
+	
+	option = {
+		name = credux_dark_ones.6.a
+		trigger = {
+			num_pops > 1
+			owner = {
+				has_valid_civic = civic_dark_influence
+			}
+		}
+		hidden_effect = {
+			planet_event = {
+				id = credux_dark_ones.3
+			}
+		}
+	}
+	
+	option = {
+		name = WORRYING
+	}
+}
+
+planet_event = {
+	id = credux_dark_ones.7 #Change Hungry to ??? (You screwed up)
+	
+	title = "credux_dark_ones.7.name"
+	desc = "credux_dark_ones.7.desc"
+	
+	picture = GFX_evt_unspeakable_horror
+	show_sound = event_life_support_fail
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_planet_flag = dark_ones_hungry
+		NOT = {
+			has_modifier = dark_ones_hungry
+		}
+	}
+	
+	immediate = {
+		remove_planet_flag = dark_ones_hungry
+		set_planet_flag = dark_ones_content
+		add_modifier = {
+			modifier = dark_ones_content
+			days = 2159
+		}
+		
+		if = {
+			limit = {	
+				num_pops < 5
+				num_pops = 5
+			}
+			while = {
+				limit = {
+					num_pops > 1
+				}
+				random_pop = {
+					kill_pop = yes
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				num_pops > 5
+			}
+			if = {
+				limit = {
+					num_pops > 1
+				}
+				random_pop = {
+					kill_pop = yes
+				}
+			}
+			if = {
+				limit = {
+					num_pops > 1
+				}
+				random_pop = {
+					kill_pop = yes
+				}
+			}
+			if = {
+				limit = {
+					num_pops > 1
+				}
+				random_pop = {
+					kill_pop = yes
+				}
+			}
+			if = {
+				limit = {
+					num_pops > 1
+				}
+				random_pop = {
+					kill_pop = yes
+				}
+			}
+			if = {
+				limit = {
+					num_pops > 1
+				}
+				random_pop = {
+					kill_pop = yes
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				num_pops > 5
+			}
+			while = {
+				limit = {
+					num_pops > 1
+				}
+				random_list = {
+					2 = {
+						random_pop = {
+							kill_pop = yes
+						}
+					}
+					
+					1 = {
+						break = yes
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = TERRIBLE
+	}
+}
+
+planet_event = {
+	id = credux_dark_ones.8 #Rid the Dark Ones from a planet - If planet has no pops, failsafe to ensure planets don't become uncolonisable
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_planet_flag = dark_ones_pleased
+			}
+			remove_planet_flag = dark_ones_pleased
+			remove_modifier = dark_ones_pleased
+		}
+		
+		if = {
+			limit = {
+				has_planet_flag = dark_ones_content
+			}
+			remove_planet_flag = dark_ones_content
+			remove_modifier = dark_ones_content
+		}
+		
+		if = {
+			limit = {
+				has_planet_flag = dark_ones_hungry
+			}
+			remove_planet_flag = dark_ones_hungry
+			remove_modifier = dark_ones_hungry
+		}
+	}
+}

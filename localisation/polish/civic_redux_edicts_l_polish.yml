@@ -1,0 +1,20 @@
+﻿l_polish:
+ edict_sacrifice:0 "Dark Tribute"
+ edict_sacrifice_desc:0 "They would fear the truth behind the Executor's purpose more than the Executors themselves, if they knew the truth."
+ edict_sacrifice_effect.tooltip:0 "Sacrifice a £pop  Pop to the §YDark Ones§! to sate Their hunger."
+ 
+ edict_sacrifice_pure:0 "Dark Tribute"
+ edict_sacrifice_pure_desc:0 "They would fear the truth behind the Executor's purpose more than the Executors themselves, if they knew the truth."
+ 
+ edict_purify:0 "From Darkness Comes Light"
+ edict_purify_desc:0 "[This.GetName] has been corrupted by dark forces. This Edict purges these forces and restores order to the world."
+ edict_purify_effect.tooltip:0 "Remove all traces of the §YDark Ones'§! presence on [Root.GetName], earning bonus £unity Unity."
+ 
+ edict_panem:0 "Bread and Circuses"
+ edict_panem_desc:0 "A feast, some games, and suddenly, the population's worries seem like nothing."
+ 
+ edict_truth:0 "Correction"
+ edict_truth_desc:0 "This Edict takes away several non-conforming citizens for correction, and increases both the intensity and effectiveness of propaganda materials on the planet."
+ 
+ edict_sacrifice_auto:0 "Automate Dark Rituals"
+ edict_sacrifice_auto_desc:0 "Delegate the process of performing sacrifices to the §YDark Ones§! to local governors and priests."

@@ -1,0 +1,40 @@
+#	Example:
+# 
+#	example_trigger = {
+#		is_country_type = default
+#		free_leader_slots > 0
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		example_trigger = yes
+#	}
+#
+
+has_generic_government = {
+	OR = {
+		has_government = gov_despotic_empire
+		has_government = gov_constitutional_dictatorship
+		has_government = gov_plutocratic_oligarchy
+		has_government = gov_representative_democracy
+		has_government = gov_constitutional_monarchy_dem
+		has_government = gov_constitutional_monarchy_imp
+	}
+}
+
+has_spiritualist_government = {
+	OR = {
+		has_government = gov_theocratic_monarchy
+		has_government = gov_theocratic_dictatorship
+		has_government = gov_theocratic_oligarchy
+		has_government = gov_theocratic_republic
+		has_government = gov_divine_empire
+		has_government = gov_holy_tribunal
+		has_government = gov_shadowy_democracy
+		has_government = gov_cultic_dominion
+		has_government = gov_demonic_dictatorship
+		has_government = gov_chaos_empire
+	}
+}

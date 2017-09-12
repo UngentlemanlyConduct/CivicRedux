@@ -1,0 +1,102 @@
+# from = country
+# this = species
+
+citizenship_full = {
+	token = citizenship_full
+
+	allow = {
+		hidden_trigger = { exists = from }
+		custom_tooltip = {
+			fail_text = "lonely_hive_mind_pops_kill_them_selves_citizenship"
+			is_lonely_hive_mind_pop = no
+		}
+		custom_tooltip = {
+			fail_text = "HIVE_MIND_SPECIES_CITIZENS_ONLY"
+			OR = {
+				NOT = { from = { has_authority = auth_hive_mind } }
+				has_trait = trait_hive_mind
+			}
+		}
+		custom_tooltip = {
+			fail_text = "FANATIC_PURIFIERS_MUST_PURIFY"
+			OR = {
+				NOT = { from = { has_valid_civic = civic_fanatic_purifiers } }
+				is_same_species = from
+			}
+		}		
+		OR = {
+			is_same_species = from
+			from = {
+				NOR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+					has_valid_civic = civic_interstellar_dominion
+				}
+			}
+		}
+		OR = {
+			NOT = { from = { has_valid_civic = civic_citizen_service } }
+			has_military_service_type = { type = military_service_full country = from }
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+citizenship_caste_system = {
+	token = citizenship_caste_system
+
+	allow = {
+		hidden_trigger = { exists = from }
+		custom_tooltip = {
+			fail_text = "HIVE_MIND_SPECIES_CITIZENS_ONLY"
+			OR = {
+				NOT = { from = { has_authority = auth_hive_mind } }
+				has_trait = trait_hive_mind
+			}
+		}
+		custom_tooltip = {
+			fail_text = "HIVE_MIND_MAIN_SPECIES_ALWAYS_CITIZEN"
+			NAND = {
+				from = { has_authority = auth_hive_mind }
+				is_same_species = from
+			}
+		}
+		custom_tooltip = {
+			fail_text = "lonely_hive_mind_pops_kill_them_selves_citizenship"
+			is_lonely_hive_mind_pop = no
+		}
+		custom_tooltip = {
+			fail_text = "FANATIC_PURIFIERS_MUST_PURIFY"
+			OR = {
+				NOT = { from = { has_valid_civic = civic_fanatic_purifiers } }
+				is_same_species = from
+			}
+		}
+		OR = {
+			is_same_species = from
+			from = {
+				NOR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+					has_valid_civic = civic_interstellar_dominion
+				}
+			}
+		}		
+		from = {
+			allows_slavery = yes
+			OR = {
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}		
+		OR = {
+			NOT = { from = { has_valid_civic = civic_citizen_service } }
+			has_military_service_type = { type = military_service_full country = from }
+		}
+	}
+	ai_will_do = {
+		factor = 5		
+	}
+}

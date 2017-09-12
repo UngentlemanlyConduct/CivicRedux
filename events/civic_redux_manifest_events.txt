@@ -1,0 +1,50 @@
+namespace = credux_md
+
+planet_event = {
+	id = credux_md.1
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			has_country_flag = manifest_destiny_bonus_colony
+		}
+	}
+	
+	immediate = {
+		add_colony_progress = 100
+	}
+}
+
+planet_event = {
+	id = credux_md.2
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			has_country_flag = manifest_destiny_bonus_colony
+		}
+	}
+	
+	immediate = {
+		create_pop = {
+			species = owner
+			ethos = owner
+		}
+		create_pop = {
+			species = owner
+			ethos = owner
+		}
+		create_pop = {
+			species = owner
+			ethos = owner
+		}
+		
+		owner = {
+			remove_country_flag = manifest_destiny_bonus_colony
+		}
+	}
+}

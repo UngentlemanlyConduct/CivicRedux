@@ -1,0 +1,96 @@
+##DARK INFLUENCE - Evil Cults
+
+#Cult (Imperium)
+gov_chaos_empire = {
+	ruler_title = RT_CHAOS_PRINCE
+	ruler_title_female = RT_CHAOS_PRINCESS
+	heir_title = RT_CHOSEN_SON
+	heir_title_female = RT_CHOSEN_DAUGHTER
+	
+	use_regnal_names = yes
+	dynastic_last_names = yes
+	
+	possible = {
+		has_authority = auth_imperial
+		has_civic = civic_dark_influence
+	}
+	
+	weight = {
+		base = 100000
+	}
+}
+
+#Cult (Dictatorship)
+gov_demonic_dictatorship = {
+	ruler_title = RT_DARK_HOST
+	
+	possible = {
+		has_authority = auth_dictatorial
+		has_civic = civic_dark_influence
+	}
+	
+	weight = {
+		base = 100000
+	}
+}
+
+#Cult (Oligarhy)
+gov_cultic_dominion = {
+	ruler_title = RT_DOMINATOR
+	
+	possible = {
+		has_authority = auth_oligarchic
+		has_civic = civic_dark_influence
+	}
+	
+	weight = {
+		base = 100000
+	}
+}
+
+#Cult (Democracy)
+gov_shadowy_democracy = {
+	ruler_title = RT_HEAD_CULTIST
+	
+	possible = {
+		has_authority = auth_democratic
+		has_civic = civic_dark_influence
+	}
+	
+	weight = {
+		base = 100000
+	}
+}
+
+#Constitutional Monarchy (Democratic Leader)
+gov_constitutional_monarchy_dem = {
+	ruler_title = RT_PRIME_MINISTER
+	possible = {
+		has_authority = auth_democratic
+		has_civic = civic_constitutional_monarchy
+	}
+	
+	weight = {
+		base = 10000
+	}
+}
+
+#Constitutional Monarchy (Democratic Leader)
+gov_constitutional_monarchy_imp = {
+	ruler_title = RT_KING
+	ruler_title_female = RT_QUEEN
+	heir_title = RT_PRINCE
+	heir_title_female = RT_PRINCESS
+	
+	use_regnal_names = yes
+	dynastic_last_names = yes
+	
+	possible = {
+		has_authority = auth_imperial
+		has_civic = civic_constitutional_monarchy
+	}
+	
+	weight = {
+		base = 10000
+	}
+}

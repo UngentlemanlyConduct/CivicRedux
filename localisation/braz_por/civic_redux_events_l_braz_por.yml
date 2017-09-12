@@ -1,0 +1,11 @@
+﻿l_braz_por:
+ credux_moh.1.name:0 "Mandate of Heaven Challenged" 
+ credux_moh.1.desc:0 "Recent hardships on one of our planets has led to some of our subjects questioning the Mandate of Heaven set by [Root.GetRulerName]. This discontent is spreading throughout our empire and we are receiving reports of small riots on our worlds.\n\nWe must keep a close eye on these events, otherwise the volatile situation could turn into a full-scale rebellion."
+ 
+ credux_moh.2.name:0 "Mandate of Heaven Restored" 
+ credux_moh.2.desc:0 "It has been a long time since our people suffered from famine or hardship, and it has reflected in their faith in our Mandate of Heaven. The people have calmed again and any immediate risk of rebellion has been quashed."
+ 
+ credux_moh.31.name:0 "The Mandate Collapses"
+ credux_moh.31.desc:0 "Recent discontent within our empire resulted in the loss of one of our worlds to a rebel faction. Very quickly, sympathizers of the rebels started taking up arms across our worlds - and frequent clashes between authorities and malcontents left us unable to react.\n\nIn a final act to bring peace to the [Root.GetName], [Root.GetRulerName] chose to abdicate his throne and give it to the leader of the rebel party. The transition of power has been relatively peaceful, and order restored. However, the Mandate of Heaven - the foundation of our empire - has fallen."
+ credux_moh.31.a:0 "May they rule with honour and wisdom."
+ credux_moh.31.a.tooltip:0 "The Mandate of Heaven is lost, and a new ruler with new ideals takes over."

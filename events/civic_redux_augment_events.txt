@@ -1,0 +1,191 @@
+namespace = credux_augment
+
+country_event = { #Tomb World for Nuclear Survivors
+	id = credux_augment.1
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_valid_civic = civic_nuclear_survivors
+	}
+	
+	immediate = {
+		modify_species = {
+			species = root
+			add_trait = trait_presentient_irradiated
+		}
+		every_owned_planet = {
+			limit = {
+				is_capital = yes
+			}
+			change_pc = pc_nuked
+		}
+	}
+}
+
+country_event = {
+	id = credux_augment.2
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_valid_civic = civic_extrasensory_overload
+	}
+	
+	immediate = {
+		modify_species = {
+			species = root
+			add_trait = trait_latent_psionic
+		}
+		ruler = {
+			add_trait = trait_ruler_psionic_hive
+		}
+		country_event = {
+			id = credux_augment.25
+		}
+	}
+}
+
+country_event = {
+	id = credux_augment.25
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				NOT = {
+					leader_class = ruler
+				}
+			}
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = leader_trait_admiral_psionic
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = leader_trait_general_psionic
+				break = yes
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_governor_psionic
+				break = yes
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = leader_trait_scientist_psionic
+				break = yes
+			}
+		}
+		every_pool_leader = {
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = leader_trait_admiral_psionic
+				add_ruler_trait = leader_trait_ruler_psionic
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = leader_trait_general_psionic
+				add_ruler_trait = leader_trait_ruler_psionic
+				break = yes
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_governor_psionic
+				add_ruler_trait = leader_trait_ruler_psionic
+				break = yes
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = leader_trait_scientist_psionic
+				add_ruler_trait = leader_trait_ruler_psionic
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = credux_augment.35
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_owned_leader = {
+			limit = {
+				NOT = {
+					leader_class = ruler
+				}
+				
+			}
+			change_species = root
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = leader_trait_admiral_cyborg
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = leader_trait_general_cyborg
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_governor_cyborg
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = leader_trait_scientist_cyborg
+			}
+		}
+		every_pool_leader = {
+			change_species = root
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = leader_trait_admiral_cyborg
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = leader_trait_general_cyborg
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_governor_cyborg
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = leader_trait_scientist_cyborg
+			}
+		}
+	}
+}
+
+country_event = {
+	id = credux_augment.3
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_valid_civic = civic_artificial_hive
+	}
+	
+	immediate = {
+		modify_species = {
+			species = root
+			add_trait = trait_cybernetic
+		}
+		ruler = {
+			add_trait = trait_ruler_hive_ai
+			change_leader_portrait = robot3
+		}
+		country_event = {
+			id = credux_augment.35
+		}
+	}
+}

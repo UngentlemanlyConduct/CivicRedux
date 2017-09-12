@@ -1,0 +1,59 @@
+﻿l_braz_por:
+ damage_vs_country_type_tiyanki_mult:0 "Damage to the Tiyanki"
+ 
+ dark_ones_pleased:0 "Dark Ones Pleased"
+ dark_ones_pleased_desc:0 "The §YDark Ones§! have recently fed on this world, and are providing bonuses for all your citizens."
+ 
+ dark_ones_content:0 "Dark Ones Content"
+ dark_ones_content_desc:0 "The §YDark Ones§! have not fed on this world for a time. §YThey§! are not providing bonuses, but are not hungry... yet."
+ 
+ dark_ones_hungry:0 "Dark Ones Hungry"
+ dark_ones_hungry_desc:0 "The §YDark Ones§! grow hungry. You should feed §YThem§! soon, or face §YTheir§! wrath..."
+ 
+ countdown_to_chaos:0 "The Countdown To Chaos"
+ countdown_to_chaos_desc:0 "You deal with the §YElder God§! will not last forever, and what happens when it expires you do not wish to know..."
+ 
+ the_great_feast:0 "The Great Feast"
+ the_great_feast_desc: "§RYOUR TIME IS UP. NOW WE MUST FEAST.§!"
+ 
+ pop_deep_earthen_connection:0 "Deep Earthen Connection"
+ pop_deep_earthen_connection:0 "This Pop shares a deep connection with their homeworld." 
+ 
+ dt_level_0:0 "Divine Transcendence"
+ dt_level_0_desc:0 "§WAs you gain Ascension Perks, the power of this Modifier increases!\n\nWith the next Ascension Perk, you will gain:§! §G10%§! £happiness §WHappiness§!"
+ 
+ dt_level_1:0 "Divine Transcendence"
+ dt_level_1_desc:0 "§WAs you gain Ascension Perks, the power of this Modifier increases!\n\nWith the next Ascension Perk, you will gain:§! §G15%§! §WGoverning Ethics Attraction§!"
+ 
+ dt_level_2:0 "Divine Transcendence"
+ dt_level_2_desc:0 "§WAs you gain Ascension Perks, the power of this Modifier increases!\n\nWith the next Ascension Perk, you will gain:§! §G15%§! £unity §WUnity§!"
+ 
+ dt_level_3:0 "Divine Transcendence"
+ dt_level_3_desc:0 "§WAs you gain Ascension Perks, the power of this Modifier increases!\n\nWith the next Ascension Perk, you will gain:§! §G10%§! §WBorder Range§!"
+ 
+ dt_level_4:0 "Divine Transcendence"
+ dt_level_4_desc:0 "§WAs you gain Ascension Perks, the power of this Modifier increases!\n\nWith the next Ascension Perk, you will gain:§! §G+20§! §WYears to Leader Lifespan§!"
+ 
+ dt_level_5:0 "Divine Transcendence"
+ dt_level_5_desc:0 "§WAs you gain Ascension Perks, the power of this Modifier increases!\n\nWith the next Ascension Perk, you will gain:§! 15% §WFaster Shipbuilding§!"
+ 
+ dt_level_6:0 "Divine Transcendence"
+ dt_level_6_desc:0 "§WAs you gain Ascension Perks, the power of this Modifier increases!\n\nWith the next Ascension Perk, you will gain:§! §G1§! §WMonthly Influence§!"
+ 
+ dt_level_7:0 "Divine Transcendence"
+ dt_level_7_desc:0 "§WAs you gain Ascension Perks, the power of this Modifier increases!\n\nWith the next Ascension Perk, all previous rewards are§! §YDOUBLED!§!"
+ 
+ dt_level_8:0 "Divine Transcendence"
+ dt_level_8_desc:0 "§WYou have completed your Divine Transcendence, and all previously awarded buffs have been§! §YDOUBLED!§!"
+ 
+ mandate_challenged:0 "Mandate of Heaven: Challenged"
+ mandate_challenged_desc:0 "The heavens revolt against you. Recent famines and hardships on one or more of your planets have led to your Mandate being challenged."
+ 
+ mandate_approved:0 "Mandate of Heaven: Approved"
+ mandate_approved_desc:0 "The people currently approve of your Mandate."
+ 
+ advanced_terraforming_in_progress:0 "Advanced Terraforming Project"
+ advanced_terraforming_in_progress_desc:0 "This planet is currently undergoing a major terraforming project to turn it into a more habitable world."
+ 
+ extreme_terraforming_in_progress:0 "Extreme Terraforming Project"
+ extreme_terraforming_in_progress_desc:0 "This planet is currently undergoing a major terraforming project to turn it into a more habitable world."

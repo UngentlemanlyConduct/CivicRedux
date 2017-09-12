@@ -1,0 +1,219 @@
+namespace = credux_dt_level
+
+country_event = {
+	id = credux_dt_level.1
+	
+	hide_window = yes
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		has_country_flag = dt_level_0
+		num_ascension_perks > 0
+		has_valid_civic = civic_divine_transcendence
+	}
+	
+	immediate = {
+			add_modifier = {
+				modifier = dt_level_1
+			}
+			set_country_flag = dt_level_1
+			
+			remove_country_flag = dt_level_0
+			remove_modifier = dt_level_0
+			
+	}
+}
+
+country_event = {
+	id = credux_dt_level.2
+	
+	hide_window = yes
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		has_country_flag = dt_level_1
+		num_ascension_perks > 1
+		has_valid_civic = civic_divine_transcendence
+	}
+	
+	immediate = {
+		add_modifier = {
+			modifier = dt_level_2
+		}
+		set_country_flag = dt_level_2
+		
+		remove_country_flag = dt_level_1
+		remove_modifier = dt_level_1
+	}
+}
+
+country_event = {
+	id = credux_dt_level.3
+	
+	hide_window = yes
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		has_country_flag = dt_level_2
+		num_ascension_perks > 2
+		has_valid_civic = civic_divine_transcendence
+	}
+	
+	immediate = {
+		add_modifier = {
+			modifier = dt_level_3
+		}
+		set_country_flag = dt_level_3
+		
+		remove_country_flag = dt_level_2
+		remove_modifier = dt_level_2
+		
+	}
+}
+
+country_event = {
+	id = credux_dt_level.4
+	
+	hide_window = yes
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		has_country_flag = dt_level_3
+		num_ascension_perks > 3
+		has_valid_civic = civic_divine_transcendence
+	}
+	
+	immediate = {
+		add_modifier = {
+			modifier = dt_level_4
+		}
+		set_country_flag = dt_level_4
+		
+		remove_country_flag = dt_level_3
+		remove_modifier = dt_level_3
+	}
+}
+
+country_event = {
+	id = credux_dt_level.5
+	
+	hide_window = yes
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		has_country_flag = dt_level_4
+		num_ascension_perks > 4
+		has_valid_civic = civic_divine_transcendence
+	}
+	
+	immediate = {
+		add_modifier = {
+			modifier = dt_level_5
+		}
+		set_country_flag = dt_level_5
+		
+		remove_country_flag = dt_level_4
+		remove_modifier = dt_level_4
+	}
+}
+
+country_event = {
+	id = credux_dt_level.6
+	
+	hide_window = yes
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		has_country_flag = dt_level_5
+		num_ascension_perks > 5
+		has_valid_civic = civic_divine_transcendence
+	}
+	
+	immediate = {
+		add_modifier = {
+			modifier = dt_level_6
+		}
+		set_country_flag = dt_level_6
+		
+		remove_country_flag = dt_level_5
+		remove_modifier = dt_level_5
+	}
+}
+
+country_event = {
+	id = credux_dt_level.7
+	
+	hide_window = yes
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		has_country_flag = dt_level_6
+		num_ascension_perks > 6
+		has_valid_civic = civic_divine_transcendence
+	}
+	
+	immediate = {
+		add_modifier = {
+			modifier = dt_level_7
+		}
+		set_country_flag = dt_level_7
+		
+		remove_country_flag = dt_level_6
+		remove_modifier = dt_level_6
+	}
+}
+
+country_event = {
+	id = credux_dt_level.8
+	
+	hide_window = yes
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		has_country_flag = dt_level_7
+		num_ascension_perks > 7
+		has_valid_civic = civic_divine_transcendence
+	}
+	
+	immediate = {
+		add_modifier = {
+			modifier = dt_level_8
+		}
+		set_country_flag = dt_level_8
+		
+		remove_country_flag = dt_level_7
+		remove_modifier = dt_level_7
+	}
+}

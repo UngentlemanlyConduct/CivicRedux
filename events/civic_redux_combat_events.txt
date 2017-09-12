@@ -1,0 +1,77 @@
+namespace = credux_combat
+
+country_event = {
+	id = credux_combat.1 #Add Unity for killing space monsters (BIG GAME HUNTERS)
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		this = {
+			has_valid_civic = civic_big_game_hunters
+		}
+		from = {
+			OR = {
+				is_country_type = tiyanki
+				is_country_type = amoeba
+				is_country_type = crystal
+				is_country_type = drone
+				is_country_type = cloud
+				
+				is_country_type = guardian_dragon
+				is_country_type = guardian_stellarite
+				is_country_type = guardian_wraith
+				is_country_type = guardian_hiver
+				is_country_type = guardian_horror
+				is_country_type = guardian_fortress
+				is_country_type = guardian_dreadnought
+				is_country_type = guardian_sphere
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				from = {
+					or = {
+						is_country_type = tiyanki
+						is_country_type = amoeba
+						is_country_type = crystal
+						is_country_type = drone
+						is_country_type = cloud
+					}
+				}
+			}
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 3
+				min = 6
+				max = 600
+			}
+		}
+		
+		if = {
+			limit = {
+				from = {
+					or = {
+						is_country_type = guardian_dragon
+						is_country_type = guardian_stellarite
+						is_country_type = guardian_wraith
+						is_country_type = guardian_hiver
+						is_country_type = guardian_horror
+						is_country_type = guardian_fortress
+						is_country_type = guardian_dreadnought
+						is_country_type = guardian_sphere
+					}
+				}
+			}
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 50
+				min = 100
+				max = 5000
+			}
+		}
+	}
+}

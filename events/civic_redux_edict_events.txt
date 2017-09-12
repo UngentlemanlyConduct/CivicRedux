@@ -1,0 +1,30 @@
+namespace = credux_edict
+
+planet_event = {
+	id = credux_edict.1
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+		random_owned_pop = {
+			limit = {
+				NOR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_xenophobe
+				}
+			}
+			random_list = {
+				1 = {
+					pop_change_ethic = ethic_authoritarian
+				}
+				1 = {
+					pop_change_ethic = ethic_xenophobe
+				}
+			}
+		}
+	}
+}

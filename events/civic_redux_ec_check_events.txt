@@ -1,0 +1,120 @@
+#Events that check whether Pops should keep Earthen Connection's bonus or not.
+namespace = credux_ec_check
+
+planet_event = { #On Colonisation
+	id = credux_ec_check.1
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_owned_pop = {
+			limit = {
+				AND = {
+					owner = {
+						has_valid_civic = civic_earthen_connection
+					}
+					OR = {
+						is_same_species = owner
+						is_subspecies = owner
+					}
+				}
+			}
+			add_modifier = {
+				modifier = pop_deep_earthen_connection
+			}
+		}
+	}
+}
+
+pop_event = { #On Migration
+	id = credux_ec_check.2
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_modifier = "pop_deep_earthen_connection"
+			}
+			remove_modifier = pop_deep_earthen_connection
+		}
+		
+		if = {
+			limit = {
+				AND = {
+					owner = {
+						has_valid_civic = civic_earthen_connection
+					}
+					OR = {
+						is_same_species = owner
+						is_subspecies = owner
+					}
+				}
+			}
+			add_modifier = {
+				modifier = pop_deep_earthen_connection
+			}
+		}
+	}
+}
+
+pop_event = { #On Pop Birth
+	id = credux_ec_check.3
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				AND = {
+					owner = {
+						has_valid_civic = civic_earthen_connection
+					}
+					OR = {
+						is_same_species = owner
+						is_subspecies = owner
+					}
+				}
+			}
+			add_modifier = {
+				modifier = pop_deep_earthen_connection
+			}
+		}
+	}
+}
+
+planet_event = { #On Change Planet Ownership
+	id = credux_ec_check.4
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_owned_pop = {
+			limit = {
+				has_modifier = "pop_deep_earthen_connection"
+			}
+			remove_modifier = pop_deep_earthen_connection
+		}
+		
+		every_owned_pop = {
+			limit = {
+				AND = {
+					owner = {
+						has_valid_civic = civic_earthen_connection
+					}
+					OR = {
+						is_same_species = owner
+						is_subspecies = owner
+					}
+				}
+			}
+			add_modifier = {
+				modifier = pop_deep_earthen_connection
+			}
+		}
+	}
+}

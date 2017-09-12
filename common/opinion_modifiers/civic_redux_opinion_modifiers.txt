@@ -1,0 +1,19 @@
+triggered_opinion_behavioural_mimicry = {
+	trigger = {
+		is_country_type = default
+		NOT = { has_ethic = ethic_hive_mind }
+		FROM = {
+			has_ethic = ethic_hive_mind
+		}
+	}
+
+	opinion = {
+		base = 0
+		modifier = {
+			add = 30
+			from = {
+				has_valid_civic = civic_behavioural_mimicry
+			}
+		}
+	}
+}

@@ -1,0 +1,424 @@
+namespace = credux_starborn
+
+country_event = {
+	id = credux_starborn.1
+	
+	title = credux_starborn.1.name
+	desc = credux_starborn.1.desc
+	
+	picture = GFX_evt_unity_symbol
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_valid_civic = civic_starborn_swarm
+	}
+	
+	immediate = {
+		add_modifier = {
+			modifier = star_sign_change_recent
+			days = 1800
+		}
+	}
+	
+	option = {
+		name = credux_starborn.1.a
+		add_modifier = {
+			modifier = star_sign_aries
+		}
+		set_country_flag = aries
+	}
+	option = {
+		name = credux_starborn.1.b
+		add_modifier = {
+			modifier = star_sign_taurus
+		}
+		set_country_flag = taurus
+	}
+	option = {
+		name = credux_starborn.1.c
+		add_modifier = {
+			modifier = star_sign_gemini
+		}
+		set_country_flag = gemini
+	}
+	option = {
+		name = credux_starborn.1.d
+		add_modifier = {
+			modifier = star_sign_cancer
+		}
+		set_country_flag = cancer
+	}
+	option = {
+		name = credux_starborn.1.e
+		add_modifier = {
+			modifier = star_sign_leo
+		}
+		set_country_flag = leo
+	}
+	option = {
+		name = credux_starborn.1.f
+		add_modifier = {
+			modifier = star_sign_virgo
+		}
+		set_country_flag = virgo
+	}
+	option = {
+		name = credux_starborn.1.g
+		add_modifier = {
+			modifier = star_sign_libra
+		}
+		set_country_flag = libra
+	}
+	option = {
+		name = credux_starborn.1.h
+		add_modifier = {
+			modifier = star_sign_scorpio
+		}
+		set_country_flag = scorpio
+	}
+	option = {
+		name = credux_starborn.1.i
+		add_modifier = {
+			modifier = star_sign_sagittarius
+		}
+		set_country_flag = sagittarius
+	}
+	option = {
+		name = credux_starborn.1.j
+		add_modifier = {
+			modifier = star_sign_capricorn
+		}
+		set_country_flag = capricorn
+	}
+	option = {
+		name = credux_starborn.1.k
+		add_modifier = {
+			modifier = star_sign_aquarius
+		}
+		set_country_flag = aquarius
+	}
+	option = {
+		name = credux_starborn.1.l
+		add_modifier = {
+			modifier = star_sign_pisces
+		}
+		set_country_flag = pisces
+	}
+}
+
+country_event = {
+	id = credux_starborn.2
+	title = credux_starborn.1.name
+	desc = credux_starborn.1.desc
+	
+	picture = GFX_evt_unity_symbol
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		has_valid_civic = civic_starborn_swarm
+		NOT = {
+			has_modifier = star_sign_change_recent
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = aries
+			}
+			remove_modifier = star_sign_aries
+		}
+		if = {
+			limit = {
+				has_country_flag = taurus
+			}
+			remove_modifier = star_sign_taurus
+		}
+		if = {
+			limit = {
+				has_country_flag = gemini
+			}
+			remove_modifier = star_sign_gemini
+		}
+		if = {
+			limit = {
+				has_country_flag = cancer
+			}
+			remove_modifier = star_sign_cancer
+		}
+		if = {
+			limit = {
+				has_country_flag = leo
+			}
+			remove_modifier = star_sign_leo
+		}
+		if = {
+			limit = {
+				has_country_flag = virgo
+			}
+			remove_modifier = star_sign_virgo
+		}
+		if = {
+			limit = {
+				has_country_flag = libra
+			}
+			remove_modifier = star_sign_libra
+		}
+		if = {
+			limit = {
+				has_country_flag = scorpio
+			}
+			remove_modifier = star_sign_scorpio
+		}
+		if = {
+			limit = {
+				has_country_flag = sagittarius
+			}
+			remove_modifier = star_sign_sagittarius
+		}
+		if = {
+			limit = {
+				has_country_flag = capricorn
+			}
+			remove_modifier = star_sign_capricorn
+		}
+		if = {
+			limit = {
+				has_country_flag = aquarius
+			}
+			remove_modifier = star_sign_aquarius
+		}
+		if = {
+			limit = {
+				has_country_flag = pisces
+			}
+			remove_modifier = star_sign_pisces
+		}
+		
+		add_modifier = {
+			modifier = star_sign_change_recent
+			days = 1800
+		}
+	}
+	
+	option = {
+		name = credux_starborn.1.a
+		trigger = {
+			OR = {
+				has_country_flag = pisces
+				has_country_flag = aquarius
+				has_country_flag = capricorn
+			}
+		}
+		remove_country_flag = pisces
+		remove_country_flag = aquarius
+		remove_country_flag = capricorn
+		
+		add_modifier = {
+			modifier = star_sign_aries
+		}
+		set_country_flag = aries
+	}
+	option = {
+		name = credux_starborn.1.b
+		trigger = {
+			OR = {
+				has_country_flag = pisces
+				has_country_flag = aquarius
+				has_country_flag = aries
+			}
+		}
+		remove_country_flag = pisces
+		remove_country_flag = aquarius
+		remove_country_flag = aries
+		
+		add_modifier = {
+			modifier = star_sign_taurus
+		}
+		set_country_flag = taurus
+	}
+	option = {
+		name = credux_starborn.1.c
+		trigger = {
+			OR = {
+				has_country_flag = pisces
+				has_country_flag = taurus
+				has_country_flag = aries
+			}
+		}
+		remove_country_flag = pisces
+		remove_country_flag = taurus
+		remove_country_flag = aries
+		
+		add_modifier = {
+			modifier = star_sign_gemini
+		}
+		set_country_flag = gemini
+	}
+	option = {
+		name = credux_starborn.1.d
+		trigger = {
+			OR = {
+				has_country_flag = gemini
+				has_country_flag = taurus
+				has_country_flag = aries
+			}
+		}
+		remove_country_flag = gemini
+		remove_country_flag = taurus
+		remove_country_flag = aries
+		
+		add_modifier = {
+			modifier = star_sign_cancer
+		}
+		set_country_flag = cancer
+	}
+	option = {
+		name = credux_starborn.1.e
+		trigger = {
+			OR = {
+				has_country_flag = gemini
+				has_country_flag = taurus
+				has_country_flag = cancer
+			}
+		}
+		remove_country_flag = gemini
+		remove_country_flag = taurus
+		remove_country_flag = cancer
+		
+		add_modifier = {
+			modifier = star_sign_leo
+		}
+		set_country_flag = leo
+	}
+	option = {
+		name = credux_starborn.1.f
+		trigger = {
+			OR = {
+				has_country_flag = gemini
+				has_country_flag = leo
+				has_country_flag = cancer
+			}
+		}
+		remove_country_flag = gemini
+		remove_country_flag = leo
+		remove_country_flag = cancer
+		
+		add_modifier = {
+			modifier = star_sign_virgo
+		}
+		set_country_flag = virgo
+	}
+	option = {
+		name = credux_starborn.1.g
+		trigger = {
+			OR = {
+				has_country_flag = virgo
+				has_country_flag = leo
+				has_country_flag = cancer
+			}
+		}
+		remove_country_flag = virgo
+		remove_country_flag = leo
+		remove_country_flag = cancer
+		
+		add_modifier = {
+			modifier = star_sign_libra
+		}
+		set_country_flag = libra
+	}
+	option = {
+		name = credux_starborn.1.h
+		trigger = {
+			OR = {
+				has_country_flag = virgo
+				has_country_flag = leo
+				has_country_flag = libra
+			}
+		}
+		remove_country_flag = virgo
+		remove_country_flag = leo
+		remove_country_flag = libra
+		
+		add_modifier = {
+			modifier = star_sign_scorpio
+		}
+		set_country_flag = scorpio
+	}
+	option = {
+		name = credux_starborn.1.i
+		trigger = {
+			OR = {
+				has_country_flag = virgo
+				has_country_flag = scorpio
+				has_country_flag = libra
+			}
+		}
+		remove_country_flag = virgo
+		remove_country_flag = scorpio
+		remove_country_flag = libra
+		
+		add_modifier = {
+			modifier = star_sign_sagittarius
+		}
+		set_country_flag = sagittarius
+	}
+	option = {
+		name = credux_starborn.1.j
+		trigger = {
+			OR = {
+				has_country_flag = sagittarius
+				has_country_flag = scorpio
+				has_country_flag = libra
+			}
+		}
+		remove_country_flag = sagittarius
+		remove_country_flag = scorpio
+		remove_country_flag = libra
+		
+		add_modifier = {
+			modifier = star_sign_capricorn
+		}
+		set_country_flag = capricorn
+	}
+	option = {
+		name = credux_starborn.1.k
+		trigger = {
+			OR = {
+				has_country_flag = sagittarius
+				has_country_flag = scorpio
+				has_country_flag = capricorn
+			}
+		}
+		remove_country_flag = sagittarius
+		remove_country_flag = scorpio
+		remove_country_flag = capricorn
+		
+		add_modifier = {
+			modifier = star_sign_aquarius
+		}
+		set_country_flag = aquarius
+	}
+	option = {
+		name = credux_starborn.1.l
+		trigger = {
+			OR = {
+				has_country_flag = sagittarius
+				has_country_flag = aquarius
+				has_country_flag = capricorn
+			}
+		}
+		remove_country_flag = sagittarius
+		remove_country_flag = aquarius
+		remove_country_flag = capricorn
+		
+		add_modifier = {
+			modifier = star_sign_pisces
+		}
+		set_country_flag = pisces
+	}
+}

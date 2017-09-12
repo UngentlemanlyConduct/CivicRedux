@@ -1,0 +1,25 @@
+namespace = credux_eco
+
+planet_event = {
+	id = credux_eco.1
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			has_valid_civic = civic_eco_warriors
+		}
+	}
+	
+	immediate = {
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = 3
+				min = 6
+				max = 300
+			}
+		}
+	}
+}

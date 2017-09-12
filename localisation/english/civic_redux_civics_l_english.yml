@@ -1,0 +1,201 @@
+﻿l_english:
+ #Strings
+ civic_tooltip_materialist_militarist:0 "Is some degree of either §YMaterialist§! or §YMilitarist§!"
+ civic_tooltip_pacifist_egalitarian:0 "Is some degree of either §YPacifist§! or §YEgalitarian§!"
+ civic_tooltip_xenophobe_materialist_spiritualist:0 "Is some degree of either §YXenophobe,§! §YMaterialist§! or §YSpiritualist§!"
+ civic_tooltip_egalitarian_authoritarian:0 "Is some degree of either §YAuthoritarian§! or §YEgalitarian§!"
+ civic_tooltip_dem_dic:0 "Has §YDemocratic§! or §YDictatorial§! Authority"
+ civic_tooltip_oli_dic:0 "Has §YOligarchic§! or §YDictatorial§! Authority"
+ civic_tooltip_dem_dic:0 "Has §YDemocratic§! or §YImperial§! Authority"
+ 
+ #Launch
+ civic_big_game_hunters:0 "Big Game Hunters"
+ civic_big_game_hunters_desc:0 "To this nation, there is nothing quite like the thrill of the hunt. From tracking the prey, to chasing their quarry, to - finally - the moment of the kill."
+ civic_tooltip_big_game_hunters_effects:0 "Damage to §YSpaceborne Organics§! and §YGuardians§! increased by §G25%§!\nKilling §YSpaceborne Organics§! or §YGuardians§! grants £unity  Unity."
+ 
+ civic_dark_influence:0 "Dark Influence"
+ civic_dark_influence_desc:0 "Something about the way this government is run, and the people who run within it, is... off..."
+ civic_tooltip_dark_influence_effects:0 "§YBorder Range§! increased by §G15%§!\n§YArmy Health, Damage§! and §YMorale§! increased by §G15%§!\n§YPop Growth Speed§! increased by §G15%§!\nYou must regularly sacrifice your £pop  Pops, lest you face the wrath of the §YDark Ones...§!"
+ 
+ civic_elder_gods_promise:0 "Promise Of An Elder God"
+ civic_elder_gods_promise_desc:0 "Evil spirits and dark gods control and empower the government. This much they know. But how far are you willing to go for true power? Would you make a deal with an Elder God?"
+ civic_tooltip_elder_gods_promise_effects:0 "Your Empire becomes nigh unstoppable, but after 100 Years, or if you anger the §YDark Ones,§! your pact with the §YElder God§! will become nullified and the §YDark Ones§! will claim their dues."
+ 
+ civic_traders_cache:0 "Trader's Cache"
+ civic_traders_cache_desc:0 "Many years ago, a large space vessel crashed into this society's homeworld, carrying a huge amount of valuable goods. They have been using these resources to advance their growth, but soon the supplies will run out..."
+ civic_tooltip_traders_cache_effects:0 "Begin the game with a cache of §YXuraGel,§! §YRiggan Spice§! and §YMuutagen Crystals§! that lasts for 10 Years.\n§G15%§! Trade Attractiveness\n§G5%§! Citizen Pop Happiness"
+ 
+ civic_curators_cache:0 "Curator's Cache"
+ civic_curators_cache_desc:0 "Many years ago, a large space vessel crashed into this society's homeworld, carrying highly advanced information drives. With this they have made great strides in technology, but soon the drives will be exhausted..."
+ civic_tooltip_curators_cache_effects:0 "Begin the game with large supply of £physics £society £engineering  §YResearch Points§!\n§G5%§! Research Speed"
+ 
+ civic_artisans_cache:0 "Artisan's Cache"
+ civic_artisans_cache_desc:0 "Many years ago, a large space vessel crashed into this society's homeworld, carrying building materials and blueprints for an advanced structure. Using these designs they created an elaborate building."
+ civic_tooltip_artisans_cache_effects:0 "Begin the game with a £building  §YMinistry Of Culture§! built on your homeworld."
+ 
+ civic_photoelectrolysis:0 "Agrarian Photoelectronics"
+ civic_photoelectrolysis_desc:0 "Harnessing a rare and secret form of technology, a method of obtaining Energy Credits from the food this society grows has been discovered!"
+ civic_tooltip_photoelectrolysis_effects:0 "£building  §YFarms§! you build have no Upkeep and produce additional £energy  §YEnergy§!"
+ 
+ civic_earthen_connection:0 "Earthen Connection"
+ civic_earthen_connection_desc:0 "This society carries with their colony ships a portion of their homeworld, filled with rich nutrients to help them survive the alien and potentially hostile climate."
+ civic_tooltip_earthen_connection_effects:0 "Habitability is increased by §G10%§! for all £pop  Pops and an additional §G10%§! if they are the §YFounding Species§! or a subspecies of the §YFounder§!"
+ 
+ civic_divine_transcendence:0 "Divine Transcendence"
+ civic_divine_transcendence_desc:0 "Through harnessing the raw power of the universe this society has prepared itself for uplifting into mystical beings akin to gods..."
+ civic_tooltip_divine_transcendence_effects:0 "You unlock a permanent Buff Effect for each §YAscension Perk§! you have unlocked."
+ 
+ civic_mandate_of_heaven:0 "Mandate Of Heaven"
+ civic_mandate_of_heaven_desc:0 "Our ruler has been chosen by the gods themselves, and all authority on state and leadership rest with them."
+ civic_tooltip_mandate_of_heaven_effects:0 "§G20%§! bonus £unity  §YUnity§!\nIncreased §YLeader Cap§! by §G3§! and §YSkill Level§! by §G1§!.\nReduced §YLeader Recruitment§! Costs by §G15%§!.\n\nThe §BMandate of Heaven§! is challenged during a §YFamine,§! reducing £happiness §YHappiness§! and §YUnrest.§!\nAfter a rebellion, you will §RLOSE§! the §BMandate of Heaven!§!"
+ 
+ civic_fanatical_befrienders:0 "Fanatic Befrienders"
+ civic_fanatical_befrienders_desc:0 "Friendship is mandatory. You will be befriended.\nResistance is impolite."
+ civic_tooltip_fanatical_befrienders_effects:0 "§HUnique Subject Type:§! BFF\n\nBFFs must pay you 15% of ALL their §YMonthly Income§! and join you in Wars.\nBFFs can be integrated after 10 years.\nEach BFF you have increases your £influence  §YInfluence.§!\nYou §RCANNOT§! have any other type of vassal."
+ 
+ civic_planet_forgers:0 "Planet Forgers"
+ civic_planet_forgers_desc:0 "This society's homeworld suffered a calamitous ecological event that nearly rendered it uninhabitable, but managed to prevent the total destruction of the environment. From their experiences they can now manipluate environments more easily."
+ civic_tooltip_planet_forgers_effects:0 "Gain access to advanced Technology that will allow you to Terraform §YUninhabitable§! planets into §YHabitable§! ones.\n§YTerraforming Cost§! reduced by §G25%§!\n\nIf you begin the game with this Civic you will gain §YTerrestrial Sculpting§! for free."
+ 
+ civic_void_engineers:0 "Void Engineers"
+ civic_void_engineers_desc:0 "There's nothing like a challenge for this society to rise to the occasion. Space construction, once thought impossible, was made trivial, and now their eyes rest on greater and grander structures."
+ 
+ civic_gift_from_the_gods:0 "Gift From The Gods"
+ civic_gift_from_the_gods_desc:0 "In the past, they always took the scale and beauty of their world for granted. It was only when they looked into the stars and saw all the flaws of other worlds did they realise its true value."
+ civic_tooltip_gift_from_the_gods_effects:0 "Begin the game with your Capital World changing to a 25-Tile §GGaia World!§!"
+ 
+ civic_one_small_step:0 "One Small Step"
+ civic_one_small_step_desc:0 "Not far from their ancestral homeworld, the people have set up a small colony. Yes, it took many years and thousands of lives and attempts, but true opportunities like this cannot be wasted!"
+ civic_tooltip_one_small_step_effects:0 "Begin the game with a §YColony§! established on another world!"
+ 
+ civic_eco_warriors:0 "Eco-Warriors"
+ civic_eco_warriors_desc:0 "No matter where, no matter when. When the stability of the natural world is threatened, this society will fight to restore it to its former glory."
+ civic_tooltip_eco_warriors_effects:0 "Tile Blocker Clear Cost and Time reduced by §G25%§!\nClearing a Tile Blocker rewards £unity  §YUnity§!"
+ 
+ civic_pit_fighters:0 "Pit Fighters"
+ civic_pit_fighters_desc:0 "This society has always held a strong warrior tradition, which transitioned into the highest levels of government. The Fighting Pits remain as a vessel for entertainment and training for warriors."
+ civic_tooltip_pit_fighters_effects:0 "§HUnique Building:§! Fighting Pits\n\nFighting Pits grant £unity  §YUnity§! and increased §YArmy Health, Damage§! and §YRecruit Speed.§!"
+ 
+ civic_insurgent_power:0 "Insurgent Power"
+ civic_insurgent_power_desc:0 "The current government had very little clout several years ago, but when a popular figure took over with a domineering attitude, they very quickly established themselves as the permanent ruler."
+ 
+ civic_panem:0 "Panem et Circenses"
+ civic_panem_desc:0 "The people who once upon a time handed out military command, high civil office, legions... everything, now restrains itself and anxiously hopes for just two things: bread and circuses."
+ civic_tooltip_panem_effects:0 "§G15%§! faster §YArmy§! and §YShip Build Speed§!\nThrough a §HPlanetary Edict§! you can change the bonus on a single world to: §R-25%§! §YFood Output§! for §G+15%§! £happiness  §YHappiness§! and §G-30§! §YUnrest§!"
+ 
+ civic_bonds_of_unity:0 "Bonds Of Unity"
+ civic_bonds_of_unity_desc:0 "We venture out into the great unknown. Now, more than ever, we need to stand together as one species, one nation."
+ 
+ civic_industrial_idyll:0 "Industrial Idyll"
+ civic_industrial_idyll_desc:0 "This society proudly embraced the Industrial Era, quickly making every citizen need mass produced - and even the things people don't want!"
+ civic_tooltip_industrial_idyll_effects:0 "£building  §YMines§! also produce a small amount of £unity  Unity."
+ 
+ civic_commercial_idyll:0 "Commercial Idyll"
+ civic_commercial_idyll_desc:0 "Business booms, and so too does the economic ecosystem of this society. Goods, vehicles, contracts, people... if it can be bought there's both a buyer and a seller."
+ civic_tooltip_commercial_idyll_effects:0 "£building  §YPower Plants§! also produce a small amount of £unity  Unity."
+ 
+ civic_technological_idyll:0 "Technological Idyll"
+ civic_technological_idyll_desc:0 "Science marches ever onward with this society. Laws have been relaxed and funding made available to academic services to help boost the cause of progress."
+ civic_tooltip_technological_idyll_effects:0 "£building  §YScience Labs§! also produce a small amount of £unity  Unity."
+ 
+ civic_rights_of_the_conquered:0 "Rights Of The Conquered"
+ civic_rights_of_the_conquered_desc:0 "This society is built upon the backbone of those they have subdued. But the subdued must be cared for, lest they destroy everything they have created."
+ 
+ civic_money_is_power:0 "Money Is Power"
+ civic_money_is_power_desc:0 "It is no secret that this society is run on the backbone of wealthy investors. Promotions and office is earned not through one's ability but how much can one buy what they need."
+ 
+ civic_destructive_tendencies:0 "Destructive Tendencies"
+ civic_destructive_tendencies_desc:0 "When this society is at war, Mutually Assured Destruction is never far from the ruling party's minds..."
+ civic_tooltip_destructive_tendencies_effects:0 "Can use the §YArmageddon§! Bombardment Stance."
+ 
+ civic_pure_bloodlines:0 "Pure Bloodlines"
+ civic_pure_bloodlines_desc:0 "The highly exclusive ruling family of this society has never changed during its history, nor let an outside influence taint it. They often go to extreme measures to preserve the bloodline."
+ 
+ civic_manifest_destiny:0 "Manifest Destiny"
+ civic_manifest_destiny_desc:0 "Our rights to the heavens and all the lands they contain is assured, and has always been so."
+ civic_tooltip_manifest_destiny_effects:0 "The first Colony you create is immediately established and gains §Y3§! bonus £pop  Pops.\nNew colonies start with §Y1§! additional £pop  Pop."
+ 
+ civic_efficient_architecture:0 "Efficient Architecture"
+ civic_efficient_architecture_desc:0 "This society has designed their buildings to be both low maintenance and simple to erect. They may not be beautiful to some, but it does help keep the lights on."
+ 
+ civic_quantum_masters:0 "Quantum Masters"
+ civic_quantum_masters_desc:0 "The scientists of this society have harnessed the power of the building blocks of the universe and of artificial intelligence - and the applications for their research have pushed them towards greatness."
+ 
+ civic_sociology_masters:0 "Socio-Biological Masters"
+ civic_sociology_masters_desc:0 "Champions of the environment, masters of military strategy and controllers of civilizations. This society’s studies into people and creatures have pushed them towards greatness."
+ 
+ civic_industry_masters:0 "Masters Of Industry"
+ civic_industry_masters_desc:0 "Shipbuilding. Mineral Extraction. Weaponry. Robotics. Aynthing that either revolves around construction or destruction, this society can achieve. Their heavy Engineering focus have pushed them towards greatness."
+ 
+ civic_tranquil_workers:0 "Tranquil Workers"
+ civic_tranquil_workers_desc:0 "Physical and mental wellbeing are highly promoted in this society, with less strenuous working hours and state-sponsored exercise/relaxation schemes help improve a worker's output."
+ civic_tooltip_tranquil_workers_effects:0 "§HUnique Building:§! Garden Of Tranquility\n\nGarden Of Tranquility grants £unity  §YUnity§! and increased £happiness  §YHappiness§! and §YLeader Lifespan.§!"
+ 
+ #Update 1
+ civic_constitutional_monarchy:0 "Constitutional Monarchy"
+ civic_constitutional_monarchy_desc:0 "This society recognises both a democratically elected parliament and an autocratic leader as the head of their government."
+ civic_tooltip_constitutional_monarchy_effects:0 "Your Empire does not suffer a Diplomatic Malus when negotiating with the Ethic not chosen for this civic.\n§YDemocratic Crusaders§! will recognise you as a Democratic society if you are an Imperial nation.\n§G5%§! Citizen Pop Happiness.\n§G5%§! Slave Output."
+ START_SCREEN_PART_TWO_CONSTITUTIONAL_MONARCHY:0 "For years we have been struggling with the identity of our nation, ruled by both a powerful sovereign and a republic chosen by the people. This back and forth between the two sides - often leading to rebellions - was eventually quashed by a decree that both shall rule with equal rights and obligations."
+ 
+ civic_alluring_diplomats:0 "Alluring Diplomats"
+ civic_alluring_diplomats_desc:0 "Diplomacy has never been a challenge for this society. Envoys often say they have tongues of silver, and find it difficult to refuse their suggestions."
+ 
+ civic_peacekeeping_interventionists:0 "Peacekeeping Interventionists"
+ civic_peacekeeping_interventionists_desc:0 "This vehemently pacifistic society aims to bring about an end to all armed conflicts, by any means necessary."
+ civic_tooltip_peacekeeping_interventionists_effects:0 "§HUnique War Demand:§! Demilitarize\n\nForce the opponent to demilitarize, weakening them and preventing them from declaring war for 10 Years.\nCan use the §YLiberation Wars§! policy."
+ 
+ civic_keepers_of_tradition:0 "Keepers Of Tradition"
+ civic_keepers_of_tradition_desc:0 "Past, present and future. This soceity's values and traditions are fondly remembered in ceremonies and celebrations."
+ civic_tooltip_keepers_of_tradition_effects:0 "Begin the game with enough £unity  Unity to unlock a §YTradition§!\n§G+10%§! £unity  Unity"
+ 
+ civic_dependable_allies:0 "Dependable Allies"
+ civic_dependable_allies_desc:0 "Steadfast and reliable, this society can be counted on to honour their agreements - to friends and enemies alike."
+ 
+ civic_starborn_swarm:0 "Starborn Swarm"
+ civic_starborn_swarm_desc:0 "The Hive Mind is deeply connected to the cosmic powers of the Universe."
+ civic_tooltip_starborn_swarm_effects:0 "Begin the game under a §BConstellation§! of your choice. Every 5 Years after, your can change your §BConstellation.§!\nEach §BConstellation§! grants a different set of bonuses."
+ 
+ civic_behavioural_mimicry:0 "Behavioural Mimicry"
+ civic_behavioural_mimicry_desc:0 "The Hive Mind's interest in other species' behaviour and customs have led to its drones attempting to copy them."
+ civic_tooltip_behavioural_mimicry_effects:0 "Everyone's Opinion of you is increased by §G30§!"
+ 
+ civic_instinctive_intuition:0 "Instinctive Intuition"
+ civic_instinctive_intuition_desc:0 "Using the sensory input from its drones the Hive Mind expands its knowledge and learning patterns."
+ 
+ #Update 2
+ civic_nuclear_survivors:0 "Nuclear Survivors"
+ civic_nuclear_survivors_desc:0 "This society fought a nuclear war which destroyed their world and wiped out 90% of their population. The survivors have since adapted to - and thrived in - the new, hostile climate."
+ civic_tooltip_nuclear_survivors_effects:0 "Your Species gains the §YIrradiated§! Trait.\nYour Homeworld becomes a §YTomb World§! with no Tile Blockers"
+ 
+ civic_stupid_sexy_xenophobes:0 "Stupid Sexy Xenophobes"
+ civic_stupid_sexy_xenophobes_desc:0 "This society seems to be highly attractive to other cultures - despite being disgusted by them."
+ civic_tooltip_stupid_sexy_xenophobes_effects:0 "You suffer no Diplomatic Malus for being a Xenophobe"
+ 
+ civic_star_wanderers:0 "Star Wanderers"
+ civic_star_wanderers_desc:0 "This society was destined to travel among the stars."
+ 
+ civic_forces_of_darkness:0 "Forces of Darkness"
+ civic_forces_of_darkness_desc:0 "This society has made a pact with the Dark Ones - immense power and unstoppable armies at their command, in exchange for their blood..."
+ civic_tooltip_forces_of_darkness_effects:0 "You can recruit Special Armies on planets where the Dark Ones are Pleased.\n§G+15%§! Army Damage and Health"
+ 
+ civic_free_love:0 "Free Love"
+ civic_free_love_desc:0 "This society diesn't care who their citizens are or where they come from - love is love, and everyone is free to love who they please."
+ 
+ civic_big_brother:0 "Big Brother"
+ civic_big_brother_desc:0 "This stratified society strictly adheres to their founding beliefs. Correction facilities are commonplace in many of the cities, and non-conformists and enemies of the state have been known to disappear."
+ civic_tooltip_big_brother_effects:0 "§HUnique Building:§! Correction Facility\nGrants Governing Ethics Attraction and enables a special Edict that further increases Ethics Attraction and forces one Pop to your Ethics.\n\nThis Civic also grants a passive §G20%§! Bonus to Governing Ethics Attraction"
+ 
+ civic_interstellar_dominion:0 "Interstellar Dominion"
+ civic_interstellar_dominion_desc:0 "This society governs over a large number of subjugated states acquired through conquest. They will not allow any of their subjects to become full citizens - their place is to serve."
+ 
+ civic_nest_builders:0 "Nest Builders"
+ civic_nest_builders_desc:0 "The Hive Mind is adept at creating new nests and worlds which it can control."
+ civic_tooltip_nest_builders_effects:0 "Begin the game with a §YColony§! established on another world!\n\n§G+25%§! Colonisation Speed"
+ 
+ civic_purifying_presense:0 "Purifying Presense"
+ civic_purifying_presense_desc:0 "The mere presense of the Hive Mind's drones causes the ecology of local planets to improve"
+ civic_tooltip_purifying_presense_effects:0 "Begin the game with your Capital World changing to a 25-Tile §GGaia World!§!\nEach month, there is a chance that a planet within your borders to move one step closer towards being a Gaia World"
+ 
+ civic_blood_hunters:0 "Blood Hunters"
+ civic_blood_hunters_desc:0 "§RBlood. The scent of prey. We Hunt.§!"
+ civic_tooltip_blood_hunters_effects:0 "§HUnique War Demand:§! Blood Hunt\n\nThe chosen planet loses at least 3 Pops, with a good chance to kill more. Each Pop killed this way awards you 1/10 of a month's worth of £unity Unity and £society Society Research"

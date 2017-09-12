@@ -1,0 +1,195 @@
+country_edict = { #Automatically Sacrifices Pops as needed
+	name = "sacrifice_auto"
+	influence_cost = 1
+	
+	modifier = {
+		country_resource_unity_mult = -0.20
+	}
+	
+	potential = {
+		num_owned_planets > 4
+		has_valid_civic = civic_dark_influence
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+planet_edict = { #Kill Pops for the Dark Ones
+	name = "sacrifice"
+	influence_cost = 0
+	length = 0
+	
+	effect = {
+		custom_tooltip = edict_sacrifice_effect.tooltip
+		planet_event = {
+			id = credux_dark_ones.2 #Put in Event Space Here
+		}
+	}
+	
+	potential = {
+		num_pops > 1
+		any_pop = {
+			NOT = {
+				is_same_species = owner
+			}
+		}
+		owner = {
+			has_valid_civic = civic_dark_influence
+		}
+	}
+	
+	allow = {
+		OR = {
+			has_modifier = dark_ones_content
+			has_modifier = dark_ones_hungry
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 10000
+			has_modifier = dark_ones_hungry
+		}
+	}
+}
+
+planet_edict = { #Kill Pops for the Dark Ones
+	name = "sacrifice_pure"
+	influence_cost = 0
+	length = 0
+	
+	effect = {
+		custom_tooltip = edict_sacrifice_effect.tooltip
+		planet_event = {
+			id = credux_dark_ones.3 #Put in Event Space Here
+		}
+	}
+	
+	potential = {
+		num_pops > 1
+		NOT = {
+			any_pop = {
+				NOT = {
+					is_same_species = owner
+				}
+			}
+		}
+		
+		owner = {
+			has_valid_civic = civic_dark_influence
+		}
+	}
+	
+	allow = {
+		OR = {
+			has_modifier = dark_ones_content
+			has_modifier = dark_ones_hungry
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 10000
+			has_modifier = dark_ones_hungry
+		}
+	}
+}
+
+planet_edict = { #Banish Dark Ones from a Planet you own (if you're not having Dark Influence)
+	name = "purify"
+	influence_cost = 0
+	length = 0
+	
+	effect = {
+		custom_tooltip = edict_purify_effect.tooltip
+		planet_event = {
+			id = credux_dark_ones.4 #Put in Event Space Here
+		}
+	}
+	
+	potential = {
+		owner = {
+			NOT = {
+				has_valid_civic = civic_dark_influence
+			}
+		}
+		OR = {
+			has_planet_flag = dark_ones_pleased
+			has_planet_flag = dark_ones_content
+			has_planet_flag = dark_ones_hungry
+		}
+	}
+	
+	allow = {
+		
+	}
+	
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+planet_edict = { #Panem et Circenses - The Games Begin
+	name = "panem"
+	influence_cost = 100
+	length = 1800
+	
+	modifier = {
+		planet_army_build_speed_mult = -0.15
+		spaceport_ship_build_time_mult = 0.15
+		tile_resource_food_mult = -0.25
+		pop_happiness = 0.15
+		planet_unrest_add = -30
+	}
+	
+	potential = {
+		owner = {
+			has_valid_civic = civic_panem
+		}
+	}
+	
+	allow = {
+		
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+
+planet_edict = { #Big Brother - Correct the thinking of an enemy of the state
+	name = "truth"
+	influence_cost = 0
+	length = 720
+	
+	effect = {
+		planet_event = {
+			id = credux_edict.1
+		}
+	}
+	
+	modifier = {
+		pop_government_ethic_attraction = 0.10
+	}
+	
+	potential = {
+		owner = {
+			has_valid_civic = civic_big_brother
+		}
+		planet = {
+			has_building = building_correction_facility
+		}
+	}
+	
+	allow = {
+		
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}

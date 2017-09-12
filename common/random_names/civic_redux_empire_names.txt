@@ -1,0 +1,525 @@
+#DARK INFLUENCE - Evil Cults!
+
+#ENDERS
+empire_name_parts_list = {
+	key = "cult_imperial"
+	parts = {
+		"Empire" = 3
+		"Kingdom" = 2
+		"Principality" = 1
+		"Dominion" = 3
+		"Realms" = 4
+		"Domain" = 3
+		"Imperium" = 4
+	}
+}
+
+empire_name_parts_list = {
+	key = "cult_dictatorial"
+	parts = {
+		"Foundation" = 2
+		"Dominion" = 4
+		"Covenant" = 3
+		"Cult" = 1
+		"Domain" = 3
+		"Legion" = 3
+		"Foundation" = 1
+		"Mandate" = 2
+		"Realms" = 4
+	}
+}
+
+empire_name_parts_list = {
+	key = "cult_oligarchy"
+	parts = {
+		"Conclave" = 3
+		"Cult" = 4
+		"Foundation" = 3
+		"League" = 1
+		"Cofederacy" = 1
+		"Union" = 2
+		"Realms" = 2
+		"Council" = 2
+		"Mandate" = 2
+		"Dominion" = 3
+		"League" = 1
+	}
+}
+
+empire_name_parts_list = {
+	key = "cult_democracy"
+	parts = {
+		"Cult" = 4
+		"Commonwealth" = 2
+		"Dominion" = 3
+		"State" = 1
+		"Nation" = 1
+		"Realms" = 2
+		"Mandate" = 2
+		"Union" = 2
+		"League" = 1
+	}
+}
+
+#Descriptives
+empire_name_parts_list = {
+	key = "cult_imperial_desc"
+	parts = {
+		"Sinister" = 3
+		"Corrupt" = 3
+		"Chaotic" = 3
+		"Demonic" = 3
+		"Enigmatic" = 3
+		"Fallen" = 3
+		"Dark" = 3
+		"Blessed" = 1
+		"Divine" = 1
+		"Sacrosanct" = 1
+		"Holy" = 2
+		"Sacred" = 2
+	}
+}
+
+empire_name_parts_list = {
+	key = "cult_dictatorial_desc"
+	parts = {
+		"Sinister" = 3
+		"Corrupt" = 3
+		"Chaotic" = 3
+		"Demonic" = 3
+		"Enigmatic" = 3
+		"Fallen" = 3
+		"Dark" = 3
+		"Blessed" = 1
+		"Divine" = 1
+		"Sacrosanct" = 1
+		"Holy" = 2
+		"Sacred" = 2
+	}
+}
+
+empire_name_parts_list = {
+	key = "cult_oligarchy_desc"
+	parts = {
+		"Sinister" = 3
+		"Corrupt" = 3
+		"Chaotic" = 3
+		"Demonic" = 3
+		"Enigmatic" = 3
+		"Fallen" = 3
+		"Dark" = 3
+		"Blessed" = 1
+		"Divine" = 1
+		"Sacrosanct" = 1
+		"Holy" = 2
+		"Sacred" = 2
+	}
+}
+
+empire_name_parts_list = {
+	key = "cult_democracy_desc"
+	parts = {
+		"Sinister" = 3
+		"Corrupt" = 3
+		"Chaotic" = 3
+		"Demonic" = 3
+		"Enigmatic" = 3
+		"Fallen" = 3
+		"Dark" = 3
+		"Blessed" = 1
+		"Divine" = 1
+		"Sacrosanct" = 1
+		"Holy" = 2
+		"Sacred" = 2
+	}
+}
+
+empire_name_parts_list = {
+	key = "constitutional_monarchy"
+	parts = {
+		"Empire" = 4
+		"Imperium" = 2
+		"Hierarchy" = 2
+		"Alliance" = 3
+		"Commonwealth" = 3
+		"Confederation" = 3
+		"Confederacy" = 3
+		"Union" = 3
+		"League" = 3
+		"Coalition" = 2
+		"Assembly" = 2
+		"Cooperative" = 1
+		"State" = 3
+		"Nation" = 3
+		"Sovereignty" = 3
+	}
+}
+
+empire_name_parts_list = {
+	key = "constitutional_monarchy_desc"
+	parts = {
+		"Interstellar" = 2
+		"Galactic" = 2
+		"United" = 3
+		"Great" = 3
+		"Democratic" = 3
+		"Free" = 2
+	}
+}
+
+##FULL NAMES
+#Cult (Imperial)
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_chaos_empire"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.cult_imperial.1"
+	noun = "[This.Capital.System.GetName]"
+	prefix_format = "[This.Capital.System.GetName] <cult_imperial>"
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_chaos_empire"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.cult_imperial.2"
+	noun = "[This.Capital.GetName]"
+	prefix_format = "[This.Capital.GetName] <cult_imperial>"
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_chaos_empire"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.cult_imperial.3"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <cult_imperial>"
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_chaos_empire"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.cult_imperial.4"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <cult_imperial>"
+}
+
+#Cult (dictatorial)
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_demonic_dictatorship"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.cult_dictatorial.1"
+	noun = "[This.Capital.System.GetName]"
+	prefix_format = "[This.Capital.System.GetName] <cult_dictatorial>"
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_demonic_dictatorship"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.cult_dictatorial.2"
+	noun = "[This.Capital.GetName]"
+	prefix_format = "[This.Capital.GetName] <cult_dictatorial>"
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_demonic_dictatorship"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.cult_dictatorial.3"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <cult_dictatorial>"
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_demonic_dictatorship"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.cult_dictatorial.4"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <cult_dictatorial>"
+}
+
+#Cult (oligarchy)
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_cultic_dominion"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.cult_oligarchy.1"
+	noun = "[This.Capital.System.GetName]"
+	prefix_format = "[This.Capital.System.GetName] <cult_oligarchy>"
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_cultic_dominion"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.cult_oligarchy.2"
+	noun = "[This.Capital.GetName]"
+	prefix_format = "[This.Capital.GetName] <cult_oligarchy>"
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_cultic_dominion"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.cult_oligarchy.3"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <cult_oligarchy>"
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_cultic_dominion"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.cult_oligarchy.4"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <cult_oligarchy>"
+}
+
+#Cult (democracy)
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_shadowy_democracy"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.cult_democracy.1"
+	noun = "[This.Capital.System.GetName]"
+	prefix_format = "[This.Capital.System.GetName] <cult_democracy>"
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_shadowy_democracy"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.cult_democracy.2"
+	noun = "[This.Capital.GetName]"
+	prefix_format = "[This.Capital.GetName] <cult_democracy>"
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_shadowy_democracy"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.cult_democracy.3"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <cult_democracy>"
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_shadowy_democracy"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.cult_democracy.4"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <cult_democracy>"
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			OR = {
+				has_government = "gov_constitutional_monarchy_dem"
+				has_government = "gov_constitutional_monarchy_imp"
+			}
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.const_mon.1"
+	noun = "[This.Capital.System.GetName]"
+	prefix_format = "[This.Capital.System.GetName] <constitutional_monarchy>"
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			OR = {
+				has_government = "gov_constitutional_monarchy_dem"
+				has_government = "gov_constitutional_monarchy_imp"
+			}
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.const_mon.2"
+	noun = "[This.Capital.GetName]"
+	prefix_format = "[This.Capital.GetName] <constitutional_monarchy>"
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 5
+			OR = {
+				has_government = "gov_constitutional_monarchy_dem"
+				has_government = "gov_constitutional_monarchy_imp"
+			}
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.const_mon.3"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <constitutional_monarchy>"
+}
+
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 2
+			OR = {
+				has_government = "gov_constitutional_monarchy_dem"
+				has_government = "gov_constitutional_monarchy_imp"
+			}
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.const_mon.4"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <constitutional_monarchy>"
+}

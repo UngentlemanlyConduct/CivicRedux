@@ -1,0 +1,137 @@
+#Mandate Of Heaven - Switch the Mandate to Challenged or Approved - or remove it on rebellion.
+namespace = credux_moh
+
+country_event = {
+	id = credux_moh.1 #Challenge Mandate at the start of a famine (10 Years)
+	
+	title = credux_moh.1.name
+	desc = credux_moh.1.desc
+	
+	picture = GFX_evt_arguing_senate
+	show_sound = event_factions
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		has_valid_civic = civic_mandate_of_heaven
+		any_owned_planet = {
+			has_modifier = starvation
+		}
+	}
+	
+	immediate = {
+		remove_modifier = mandate_approved
+		add_modifier = {
+			modifier = mandate_challenged
+			days = 3600
+		}
+	}
+	
+	option = {
+		name = WORRYING
+	}
+}
+
+country_event = {
+	id = credux_moh.2 #The Mandate is re-approved after 10 years of a famine starting
+	
+	title = credux_moh.2.name
+	desc = credux_moh.2.desc
+	
+	picture = GFX_evt_metropolis
+	show_sound = event_celebration
+	
+	is_triggered_only = no
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	trigger = {
+		has_valid_civic = civic_mandate_of_heaven
+		has_country_flag = mandate_of_heaven
+		NOR = {
+			has_modifier = mandate_approved
+			has_modifier = mandate_challenged
+		}
+	}
+	
+	immediate = {
+		remove_modifier = mandate_challenged
+		add_modifier = {
+			modifier = mandate_approved
+		}
+	}
+	
+	option = {
+		name = EXCELLENT
+	}
+}
+
+planet_event = {
+	id = credux_moh.3
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			has_valid_civic = civic_mandate_of_heaven
+		}
+	}
+	
+	immediate = {
+		owner = {
+			country_event = {
+				id = credux_moh.31
+			}
+		}
+	}
+}
+
+country_event = {
+	id  = credux_moh.31
+	
+	title = credux_moh.31.name
+	desc = credux_moh.31.desc
+	
+	picture = GFX_evt_alien_propaganda
+	show_sound = event_planetary_riot
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_country_flag = mandate_of_heaven
+		remove_modifier = mandate_challenged
+		remove_modifier = mandate_approved
+	}
+	
+	option = {
+		name = credux_moh.31.a
+		custom_tooltip = credux_moh.31.a.tooltip
+		hidden_effect = {
+			kill_leader = {
+				type = ruler
+				show_notification = no
+			}
+			change_government = {
+				authority = auth_imperial
+				civics = random
+			}
+			create_leader = {
+				type = ruler
+				species = ROOT
+				name = random
+				skill = 400
+				traits = {
+					trait = trait_ruler_champion_of_the_people
+					trait = trait_ruler_charismatic
+				}
+			}
+		}
+	}
+}

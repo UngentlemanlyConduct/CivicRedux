@@ -1,0 +1,154 @@
+#KEY TO CIVICS+ EVENTS
+####################################
+#credux_ec_check = Checks the status of Pops for Earthen Connection's bonus Habitability
+#credux_start = Starting events, apply only at the beginning of the game.
+#credux_dark_ones = Events directly linked to Dark Influence/Promise of an Elder God
+#credux_dt = Divine Transcendence levelup events
+#credux_moh = Mandate of Heaven - Switch state to challenged/approved and remove if necessary
+#credux_md = Manifest Destiny - Give the first colony its bonuses!
+#credux_combat = Combat-related Civic events
+#credux_starborn = Manages the Starborn Swarm constellation changes
+
+# No scope, like on_game_start
+on_monthly_pulse = {
+	events = {
+		credux_dark_ones.5
+		credux_dark_ones.6
+		credux_dark_ones.7
+		credux_dt_level.1
+		credux_dt_level.2
+		credux_dt_level.3
+		credux_dt_level.4
+		credux_dt_level.5
+		credux_dt_level.6
+		credux_dt_level.7
+		credux_dt_level.8
+		credux_moh.1
+		credux_moh.2
+		credux_starborn.2
+	}
+	random_events = {
+		1500 = 0
+		10 = credux_purify.9001
+	}
+}
+
+on_game_start_country = {
+	events = {
+		credux_start.1 #Photoelectrolysis - Replace starting farms with upgraded ones.
+		credux_start.2 #Earthen Connection - Starting Pops gain Habitability Bonus if Primary Species.
+		credux_start.3 #Caches - Gives starting bonuses.
+		credux_start.4 #Divine Transcendence - Gives the starting buff.
+		credux_start.5 #Mandate of Heaven - Add Mandate Approved modifier
+		credux_start.6 #Gift From The Gods - 25-Tile Gaia Capital!
+		credux_start.7 #One Small Step - Set up the colony
+		credux_start.8 #Planet Forgers - Give Terraforming Tech
+		credux_start.9 #Manifest Destiny - Add Flag for First Colony Bonus
+		#credux_start.10 #Eco-Warriors - Gives TB Clearing Tech
+		credux_start.11 #Keepers Of Tradition - Give Unity
+		credux_dark_ones.1 #Dark Influence - Adds modifier to all worlds without it.
+		credux_starborn.1 #Starborn Swarm - Choose your Starting Constellation
+		credux_augment.1
+		#credux_augment.2
+		#credux_augment.3
+	}
+}
+
+# Triggers when pressing begin in the intro window
+on_press_begin = {
+	events = {
+		credux_dark_ones.111 # Dark Influence - Rules
+	}
+}
+
+# Initial rebels manage to take control of the planet, happens before the new owner is set, after the war is created.
+# This = Rebel Country
+# From = Planet
+# FromFrom = War
+on_rebels_take_planet = {
+	events = {
+		credux_moh.3 #Remove the Mandate of Heaven from the owner empire
+	}
+}
+
+# A planet has begun the colonization process.
+# Scope = Planet
+on_colonization_started = {
+	events = {
+		credux_md.1
+	}
+}
+
+# A planet has been colonized.
+# Scope = Planet
+on_colonized = {
+	events = {
+		credux_ec_check.1
+		credux_md.2
+		credux_dark_ones.11 #Dark Influence - Adds modifier to all worlds without it.
+	}
+}
+
+# A pop has finished migrating to another planet
+# Root = pop
+# From = Tile on the new planet
+# FromFrom = Tile on the old planet
+on_pop_migration_end = {
+	events = {
+		credux_ec_check.2
+	}
+}
+
+# A pop has been born
+# This = pop
+on_pop_birth = {
+	events = {
+		credux_ec_check.3
+	}
+}
+
+#From = Country scope
+#This = Planet scope
+on_planet_transfer = {
+	events = {
+		credux_ec_check.4
+		credux_dark_ones.11 #Dark Influence - Adds modifier to all worlds without it.
+	}
+}
+
+# Initial rebels manage to take control of the planet, happens after the new owner is set, after the war is created.
+# This = Rebel Country
+# From = Planet
+# FromFrom = War
+on_rebels_take_planet_owner_switched = {
+	events = {
+		credux_ec_check.4
+		credux_dark_ones.11 #Dark Influence - Adds modifier to worlds without it.
+	}
+}
+
+#From = Country scope
+#This = Planet scope
+on_planet_ownerless = {
+	events = {
+		credux_dark_ones.8
+	}
+}
+
+# This = owner of ship 1 (combatant)
+# From = owner of ship 2 (destroyed)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+on_ship_destroyed_perp = {
+	events = {
+		credux_combat.1 #BIG GAME HUNTERS - Add Unity for destroyed space creatures
+	}
+}
+
+# From = Tile
+# This = Planet
+on_blocker_cleared = {
+	events = {
+		credux_eco.1 #Eco-Warriors - Grant Unity on TB clear
+	}
+}

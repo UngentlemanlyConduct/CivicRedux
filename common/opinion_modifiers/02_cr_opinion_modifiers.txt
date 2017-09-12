@@ -1,0 +1,320 @@
+opinion_of_egalitarian = {
+	opinion = {
+		base = 0
+		modifier = {
+			add = -10
+			has_ethic = "ethic_authoritarian"
+			FROM = { 
+				has_ethic = "ethic_egalitarian"
+				NOT = {
+					has_valid_civic = civic_constitutional_monarchy
+				}
+			}
+		}
+		modifier = {
+			add = -20
+			has_ethic = "ethic_authoritarian"
+			FROM = { 
+				has_ethic = "ethic_fanatic_egalitarian"
+				NOT = {
+					has_valid_civic = civic_constitutional_monarchy
+				}
+			}
+		}
+		modifier = {
+			add = -20
+			has_ethic = "ethic_fanatic_authoritarian"
+			FROM = { 
+				has_ethic = "ethic_egalitarian"
+				NOT = {
+					has_valid_civic = civic_constitutional_monarchy
+				}
+			}
+		}
+		modifier = {
+			add = -40
+			has_ethic = "ethic_fanatic_authoritarian"
+			FROM = { 
+				has_ethic = "ethic_fanatic_egalitarian"
+				NOT = {
+					has_valid_civic = civic_constitutional_monarchy
+				}
+			}
+		}
+	}
+}
+
+opinion_of_authoritarian = {
+	opinion = {
+		base = 0
+		modifier = {
+			add = -10
+			has_ethic = "ethic_egalitarian"
+			FROM = { 
+				has_ethic = "ethic_authoritarian"
+				NOT = {
+					has_valid_civic = civic_constitutional_monarchy
+				}
+			}
+		}
+		modifier = {
+			add = -20
+			has_ethic = "ethic_egalitarian"
+			FROM = { 
+				has_ethic = "ethic_fanatic_authoritarian"
+				NOT = {
+					has_valid_civic = civic_constitutional_monarchy
+				}
+			}
+		}
+		modifier = {
+			add = -20
+			has_ethic = "ethic_fanatic_egalitarian"
+			FROM = { 
+				has_ethic = "ethic_authoritarian"
+				NOT = {
+					has_valid_civic = civic_constitutional_monarchy
+				}
+			}
+		}
+		modifier = {
+			add = -40
+			has_ethic = "ethic_fanatic_egalitarian"
+			FROM = { 
+				has_ethic = "ethic_fanatic_authoritarian"
+				NOT = {
+					has_valid_civic = civic_constitutional_monarchy
+				}
+			}
+		}		
+	}
+}
+
+opinion_dc_vs_autocracy = {
+	opinion = {
+		modifier = {
+			add = -100
+			has_ai_personality = democratic_crusaders	
+			FROM = {
+				has_election_type = none
+				NOT = {
+					has_valid_civic = civic_constitutional_monarchy
+				}
+			}
+		}	
+	}
+}
+
+opinion_dc_vs_democratic = {
+	opinion = {
+		modifier = {
+			add = 25
+			has_ai_personality = democratic_crusaders 
+			FROM = {
+				OR = {
+					has_election_type = democratic
+					has_valid_civic = civic_constitutional_monarchy
+				}
+			}
+		}		
+	}
+}
+
+opinion_xenophobes = {
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = -10
+			OR = {
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+			FROM = { has_ethic = "ethic_xenophobe" }
+			FROM = {
+				NOT = {
+					has_valid_civic = civic_stupid_sexy_xenophobes
+				}
+			}
+			NOT = { is_same_species_class = FROM }
+		}
+		modifier = {
+			add = -5
+			OR = {
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+			FROM = { has_ethic = "ethic_xenophobe" }
+			FROM = {
+				NOT = {
+					has_valid_civic = civic_stupid_sexy_xenophobes
+				}
+			}
+			is_same_species_class = FROM
+			NOT = { is_same_species = FROM }
+			NOT = { is_subspecies = FROM }
+		}		
+		
+		modifier = {
+			add = -10
+			NOT = { has_ethic = "ethic_fanatic_xenophobe" }
+			NOT = { has_ethic = "ethic_xenophobe" }
+			FROM = { has_ethic = "ethic_xenophobe" }
+			FROM = {
+				NOT = {
+					has_valid_civic = civic_stupid_sexy_xenophobes
+				}
+			}
+			NOT = { is_same_species_class = FROM }
+		}
+		modifier = {
+			add = -5
+			NOT = { has_ethic = "ethic_fanatic_xenophobe" }
+			NOT = { has_ethic = "ethic_xenophobe" }
+			FROM = { has_ethic = "ethic_xenophobe" }
+			FROM = {
+				NOT = {
+					has_valid_civic = civic_stupid_sexy_xenophobes
+				}
+			}
+			is_same_species_class = FROM
+			NOT = { is_same_species = FROM }
+			NOT = { is_subspecies = FROM }
+		}
+		
+		modifier = {
+			add = -20
+			OR = {
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+			FROM = { has_ethic = "ethic_fanatic_xenophobe" }
+			NOT = { is_same_species_class = FROM }
+		}
+		modifier = {
+			add = -10
+			OR = {
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+			}
+			FROM = { has_ethic = "ethic_fanatic_xenophobe" }
+			FROM = {
+				NOT = {
+					has_valid_civic = civic_stupid_sexy_xenophobes
+				}
+			}
+			is_same_species_class = FROM
+			NOT = { is_same_species = FROM }
+			NOT = { is_subspecies = FROM }
+		}			
+		
+		modifier = {
+			add = -20
+			NOT = { has_ethic = "ethic_fanatic_xenophobe" }
+			NOT = { has_ethic = "ethic_xenophobe" }
+			FROM = { has_ethic = "ethic_fanatic_xenophobe" }
+			FROM = {
+				NOT = {
+					has_valid_civic = civic_stupid_sexy_xenophobes
+				}
+			}
+			NOT = { is_same_species_class = FROM }
+		}
+		modifier = {
+			add = -10
+			NOT = { has_ethic = "ethic_fanatic_xenophobe" }
+			NOT = { has_ethic = "ethic_xenophobe" }
+			FROM = { has_ethic = "ethic_fanatic_xenophobe" }
+			FROM = {
+				NOT = {
+					has_valid_civic = civic_stupid_sexy_xenophobes
+				}
+			}
+			is_same_species_class = FROM
+			NOT = { is_same_species = FROM }
+			NOT = { is_subspecies = FROM }
+		}
+	}
+}
+
+opinion_xenophobia = {
+	opinion = {
+		base = 0
+		
+		modifier = {
+			add = -20
+			NOT = { has_valid_civic = civic_fanatic_purifiers } #handled elsewhere
+			has_ethic = "ethic_xenophobe"
+			NOT = { is_same_species_class = FROM }
+			FROM = {
+				NOT = {
+					has_valid_civic = civic_stupid_sexy_xenophobes
+				}
+			}
+		}
+		modifier = {
+			add = -10
+			NOT = { has_valid_civic = civic_fanatic_purifiers } #handled elsewhere
+			has_ethic = "ethic_xenophobe"
+			is_same_species_class = FROM
+			NOT = { is_same_species = FROM }
+			NOT = { is_subspecies = FROM }
+			FROM = {
+				NOT = {
+					has_valid_civic = civic_stupid_sexy_xenophobes
+				}
+			}
+		}
+		modifier = {
+			add = -5
+			NOT = { has_valid_civic = civic_fanatic_purifiers } #handled elsewhere
+			has_ethic = "ethic_xenophobe"
+			is_same_species_class = FROM
+			NOT = { is_same_species = FROM }
+			is_subspecies = FROM
+			FROM = {
+				NOT = {
+					has_valid_civic = civic_stupid_sexy_xenophobes
+				}
+			}
+		}
+		
+		modifier = {
+			add = -40
+			NOT = { has_valid_civic = civic_fanatic_purifiers } #handled elsewhere
+			has_ethic = "ethic_fanatic_xenophobe"
+			NOT = { is_same_species_class = FROM }
+			FROM = {
+				NOT = {
+					has_valid_civic = civic_stupid_sexy_xenophobes
+				}
+			}
+		}
+		modifier = {
+			add = -20
+			NOT = { has_valid_civic = civic_fanatic_purifiers } #handled elsewhere
+			has_ethic = "ethic_fanatic_xenophobe"
+			is_same_species_class = FROM
+			NOT = { is_same_species = FROM }
+			NOT = { is_subspecies = FROM }
+			FROM = {
+				NOT = {
+					has_valid_civic = civic_stupid_sexy_xenophobes
+				}
+			}
+		}
+		modifier = {
+			add = -10
+			NOT = { has_valid_civic = civic_fanatic_purifiers } #handled elsewhere
+			has_ethic = "ethic_fanatic_xenophobe"
+			is_same_species_class = FROM
+			NOT = { is_same_species = FROM }
+			is_subspecies = FROM
+			FROM = {
+				NOT = {
+					has_valid_civic = civic_stupid_sexy_xenophobes
+				}
+			}
+		}
+	}
+}

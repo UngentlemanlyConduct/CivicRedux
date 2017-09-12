@@ -1,0 +1,11 @@
+﻿l_french:
+ war_demand_demilitarize_header:1 "§HDemilitarize§!"
+ war_demand_demilitarize_subtext:0 "[parameter:country.GetName]"
+ war_demand_demilitarize_tooltip_header:0 "$war_demand_demilitarize_header$"
+ war_demand_demilitarize_tooltip_content:2 "[parameter:country.GetName] will be forced to demilitarize, weakening their military capacity and preventing them from Declaring War for 10 Years. We will also gain §G100§! £influence  Influence"
+ war_demand_demilitarize_tooltip_proper_header:0 "$war_demand_demilitarize_header$"
+ war_demand_demilitarize_tooltip_proper_content:1 "$war_demand_demilitarize_tooltip_content$"
+ war_demand_already_demilitarized:0 "[parameter:country.GetName] is currently demilitarized, there is no point in enforcing this demand."
+ 
+ demilitarized:0 "Demilitarized"
+ demilitarized_desc:0 "We have been forced by another empire to lay down our weapons, weakening our military power."
