@@ -7,6 +7,7 @@ ABOUT CIVIC REDUX
 Civic Redux is a mod for the Paradox game Stellaris that increases the amount of available Civics dramatically, and was designed to help with immersion, storytelling and gameplay. Some of these Civics cause widespread changes to your empire at the start of the game, or for a time after.
 
 This uses the Stellaris in-game syntax for game files and YAML (Ain't Markup Language) for localisation.
+As the full GFX file was simply too large to upload at once, it's been separated into portraits and interface folders. You will have to merge them into a GFX folder yourself if you want the end result to work. This is a limitation of GitHub, not me. Sorry.
 
 RULES
 
