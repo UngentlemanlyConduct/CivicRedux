@@ -1,0 +1,21 @@
+﻿l_spanish:
+ TECH_UNLOCK_TERRAFORMING_BARREN_TITLE:0 "§HUnlock Terraforming Project:§! Barren Worlds"
+ TECH_UNLOCK_TERRAFORMING_BARREN_DESC:0 "Through multiple stages, you can now terraform Barren Worlds into a Habitable World."
+ TECH_UNLOCK_TERRAFORMING_TOXIC_TITLE:0 "§HUnlock Terraforming Project:§! Toxic Worlds"
+ TECH_UNLOCK_TERRAFORMING_TOXIC_DESC:0 "Through multiple stages, you can now terraform Toxic Worlds into a Habitable World."
+ TECH_UNLOCK_TERRAFORMING_MOLTEN_TITLE:0 "§HUnlock Terraforming Project:§! Molten Worlds"
+ TECH_UNLOCK_TERRAFORMING_MOLTEN_DESC:0 "Through multiple stages, you can now terraform Molten Worlds into a Habitable World."
+ TECH_UNLOCK_TERRAFORMING_FROZEN_TITLE:0 "§HUnlock Terraforming Project:§! Frozen Worlds"
+ TECH_UNLOCK_TERRAFORMING_FROZEN_DESC:0 "Through multiple stages, you can now terraform Frozen Worlds into a Habitable World."
+ 
+ tech_atmospheric_creation:0 "Atmospheric Creation"
+ tech_atmospheric_creation_desc:0 "Restoring a planet's climate is not so different to creating a new one altogether. You just need a LOT more time, resources and effort to generate and stabilise it."
+ 
+ tech_planetary_denitrification:0 "Planetary Denitrification"
+ tech_planetary_denitrification_desc:0 "Through the use of heavy chlorine bombing and techniques learned from generating new atmospheres, we can transform the climate of a world ruined by pollutants and nitrates into a more stable condition for life."
+ 
+ tech_macro_cryogenics:0 "Macro-Cryogenics"
+ tech_macro_cryogenics_desc:0 "Large scale freezing and heat reduction on a planet's surface can eventually bring even the hottest climates down to a reasonable level."
+ 
+ tech_global_heat_induction:0 "Global Heat Induction"
+ tech_global_heat_induction_desc:0 "Ice, when presented with enough heat, melts. Heating the atmosphere of a Frozen World should eventually produce similar results."

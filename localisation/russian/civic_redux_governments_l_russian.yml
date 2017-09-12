@@ -1,0 +1,25 @@
+﻿l_russian:
+ gov_shadowy_democracy:0 "Shadowy Democracy"
+ gov_shadowy_democracy_desc:0 "This government is a spiritualistic form of democracy, where citizens vote for powerful religious figures - all linked to dark gods and deities - to represent them."
+ gov_cultic_dominion:0 "Cultic Dominion"
+ gov_cultic_dominion_desc:0 "This government is a spiritualistic form of oligarchy, where the heads of several dark cults control the government. They convene regularly to elect a new ruler, aided by the powers of their gods and deities."
+ gov_demonic_dictatorship:0 "Demonic Dictatorship"
+ gov_demonic_dictatorship_desc:0 "This government is a spiritualistic form of dictatorship, ruled by a single individual and assisted by the myriad dark cults present in government. The leader becomes host to a powerful and sinister entity, forced to carry out their will."
+ gov_chaos_empire:0 "Chaos Empire"
+ gov_chaos_empire_desc:0 "This government is a spiritualistic form of autocracy, led by a family following the wills of sinister and evil entities. They are hailed as living gods, and those who question their authority mysteriously vanish."
+ 
+ gov_constitutional_monarchy_dem:0 "Constitutional Monarchy"
+ gov_constitutional_monarchy_dem_desc:0 "This relatively pure form of government follows both democratic and autocratic principles, with a publicly led parliament with its own rights and powers alongside a hereditary monarchy."
+ gov_constitutional_monarchy_imp:0 "Constitutional Monarchy"
+ gov_constitutional_monarchy_imp_desc:0 "This relatively pure form of government follows both democratic and autocratic principles, with a publicly led parliament with its own rights and powers alongside a hereditary monarchy."
+ 
+ RT_HEAD_CULTIST:0 "Head Cultist"
+ RT_DOMINATOR:0 "Dominator"
+ RT_DARK_HOST:0 "Dark Host"
+ RT_CHAOS_PRINCE:0 "Chaos Prince"
+ RT_CHAOS_PRINCESS:0 "Chaos Princess"
+ RT_CHOSEN_SON:0 "Chosen Son"
+ RT_CHOSEN_DAUGHTER:0 "Chosen Daughter"
+ 
+ RT_PRINCE:0 "Prince"
+ RT_PRINCESS:0 "Princess"

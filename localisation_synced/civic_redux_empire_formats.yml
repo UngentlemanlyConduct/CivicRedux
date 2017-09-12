@@ -1,0 +1,23 @@
+﻿l_default:
+ #Government Name Initialisers (evil cults)
+ format.cult_imperial.1: "<cult_imperial> of [This.Capital.System.GetName]"
+ format.cult_imperial.2: "<cult_imperial> of [This.Capital.GetName]"
+ format.cult_imperial.3: "[This.GetSpeciesName] <cult_imperial>"
+ format.cult_imperial.4: "<cult_imperial_desc> [This.GetSpeciesName] <cult_imperial>"
+ format.cult_dictatorial.1: "<cult_dictatorial> of [This.Capital.System.GetName]"
+ format.cult_dictatorial.2: "<cult_dictatorial> of [This.Capital.GetName]"
+ format.cult_dictatorial.3: "[This.GetSpeciesName] <cult_dictatorial>"
+ format.cult_dictatorial.4: "<cult_dictatorial_desc> [This.GetSpeciesName] <cult_dictatorial>"
+ format.cult_oligarchy.1: "<cult_oligarchy> of [This.Capital.System.GetName]"
+ format.cult_oligarchy.2: "<cult_oligarchy> of [This.Capital.GetName]"
+ format.cult_oligarchy.3: "[This.GetSpeciesName] <cult_oligarchy>"
+ format.cult_oligarchy.4: "<cult_oligarchy_desc> [This.GetSpeciesName] <cult_oligarchy>"
+ format.cult_democracy.1: "<cult_democracy> of [This.Capital.System.GetName]"
+ format.cult_democracy.2: "<cult_democracy> of [This.Capital.GetName]"
+ format.cult_democracy.3: "[This.GetSpeciesName] <cult_democracy>"
+ format.cult_democracy.4: "<cult_democracy_desc> [This.GetSpeciesName] <cult_democracy>"
+ format.const_mon.1: "<constitutional_monarchy> of [This.Capital.System.GetName]"
+ format.const_mon.2: "<constitutional_monarchy> of [This.Capital.GetName]"
+ format.const_mon.3: "[This.GetSpeciesName] <constitutional_monarchy>"
+ format.const_mon.4: "<constitutional_monarchy_desc> [This.GetSpeciesName] <constitutional_monarchy>"
+ 
